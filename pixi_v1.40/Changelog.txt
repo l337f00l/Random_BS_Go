@@ -1,0 +1,12 @@
+~Flyin' Disco Shell~
+
+(DD/MM/YYYY)
+V.1.0 (17.03.2019)
+- Initial release
+
+V.1.0.1 (15.05.2019)
+- Fixed strange offscreen glitch that marked sprite as "process offscreen" and "spawn when nearby" which leads to sprite staying alive offscreen AND it's duplication when approaching it's spawn point.
+
+V.1.1 (11.09.2021)
+- Made use of PIXI's new print state, which fixes sprite interaction (for example one flying disco shell vs. another flying disco shell would result in one staying alive, even though both should be dead)
+- (Mod edit:) Fixed a bug where following movement had a tendency to break for speeds above $40.

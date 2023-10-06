@@ -1,0 +1,2 @@
+The UberASM resets the layer 3 position to 0 in the init be aware if you are using anything involving layer 3.
+Hopefully in the next update I will back up the layer 3 position so this wouldn't cause any issues.

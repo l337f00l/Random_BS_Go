@@ -1,0 +1,133 @@
+#amk 2
+
+#SPC
+
+{
+	#title "Mega Man 7 - Dr. Wily 4 (NES)"
+	#game "Rockman Exile (Mega Man 2 Hack)"
+	#author "Capcom, Blast Hornet"
+	#comment "ported by S1Z2"
+}
+
+#path "RockmanExileWily4"
+
+#samples
+{
+#default
+"Square o3l.brr"
+"Square o3h.brr"
+"Square o4l.brr"
+"Square o4h.brr"
+"Square o5l.brr"
+"Square o5h.brr"
+"Square o6.brr"
+
+"Triangle o3.brr"
+"Triangle o4.brr"
+
+"Hat.brr"
+"Snare.brr"
+}
+
+#instruments
+{
+"Square o3l.brr"    $FF $E0 $7F $10 $00 ; @30
+"Square o3h.brr"    $FF $E0 $7F $0C $00 ; @31
+"Square o4l.brr"    $FF $E0 $7F $08 $00 ; @32
+"Square o4h.brr"    $FF $E0 $7F $06 $00 ; @33
+"Square o5l.brr"    $FF $E0 $7F $04 $00 ; @34
+"Square o5h.brr"    $FF $E0 $7F $03 $00 ; @35
+"Square o6.brr"     $FF $E0 $7F $04 $00 ; @36
+"Triangle o3.brr"   $FF $E0 $7F $0C $00 ; @37
+"Triangle o4.brr"   $FF $E0 $7F $08 $00 ; @38
+"Hat.brr"           $FF $E0 $7F $0B $00 ; @39
+"Snare.brr"         $FF $E0 $7F $0B $00 ; @40
+}
+
+"S3L=@30 o3"
+"S3H=@31 o3"
+"S4L=@32 o4"
+"S4H=@33 o4"
+"S5L=@34 o5"
+"S5H=@35 o5"
+"S6=@36 o5"
+
+"T3=@37 o3"
+"T4=@38 o4"
+
+#0 w165 t73
+
+/
+
+v150 l8
+
+[S4H b4 S5L c4de4 S4H b2. g4] S4L fe2.ed16e16d4. S3H b2r8
+* S4H ba4. S4L f2 S5L d16c16 S4H b4 S5L c4d4e4
+
+[S5L r4c4d4c4 S4H bg4 S4L e4] d4e S4H a2agag S5L c4 S4H b4a4g4
+* S4H g4ba1a1
+
+S4L f4.e4.f4 S4H g4. S4L f2 S5L d16c16 S4H b4.g4. S4L e4de2ede
+f4.e4.d4 S4H g4. S4L f4.e4 S4H a4.g4. S4L f4
+e S4H f+4g+4ab S5L c
+
+#1
+v140 
+
+/
+
+l8
+
+$EE $0A
+
+[[
+S4L ccr4.cr4c4r S3H b4. S4L c4
+S3H aar4.ar4bbrbrb S4L cd
+]]2
+
+v134 
+
+[l8 S4H a S5L cfc S5H a S5L fc S4H a
+S4H b S5L d S5H g S5L d S5H bg S5L d S4H b
+S5L ce S5H a S5L e S6 c S5H a S5L ec l16]
+ce S5H a S6 c S5L e S5H a
+S6 ce S5H a S6 ceacea>c<
+*
+S4H a S5L ce S5H a S6 c S5H a S5L ec
+S6 ec S5H a S5L e S6 c S5H a S5L ec
+
+S3H a1b2.a4g2.b4
+S3L c1f1e1d1 S4H b8b8r8b8r8b8 S5L d8e=23 v130 r=1
+
+#2
+v156 l8
+
+T3
+
+[[
+aararara
+aaraaarg
+(1)[ffrfrfrf
+ggrgr]b4g
+]]2
+
+[[
+(1)
+grgaararare
+aaraggrg
+]]2
+
+f4rfr4.a
+g4rgr4.f
+e4rer4.b
+aarara T4 ce
+
+ddrdrdrd
+ccrcrcrc T3
+bbrbrbrb
+eere4f+g+b
+
+#3
+v156 o4 l16
+
+[[@39 c8cc @40 c8 @39 cc]]48

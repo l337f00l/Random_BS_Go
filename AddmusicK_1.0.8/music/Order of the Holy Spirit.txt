@@ -1,0 +1,382 @@
+;===============================;
+;	THIS RIGHT HERE IS DEFINITELY IMPORTANT!!
+;===============================;
+
+; There are two different options for changing the pitch
+; of the song.
+
+; To change the pitch of the song, replace the number after
+; ''VERSION'' to any number between 1 - 3 (three customizable pitches).
+; This won't affect the percussion as it doesn't use the variables below.
+
+; i.e. if I wanted to change the pitch to that of the PSP Remake version, I'd
+; change ''#define VERSION 1'' to ''#define VERSION 2.''
+; More information on each number value is listed below.
+
+; this allows for awesome customizable options to fit your preferences...
+; but if you know your stuff, then you should be able
+; to go way beyond the limits I give you here.
+
+;===============================;
+;	Song Pitch
+;===============================;
+
+#define VERSION 1 ; Change Value between 1 - 3
+
+;===============================;
+
+; 1 = Pitch will be on the f# minor (Default Ver.)
+
+; 2 = Pitch will be on the g minor (Crucifix Held Close Ver.)
+
+; 3 = Pitch will be on the e minor (Custom Ver.)
+
+;===============================;
+;	SPC Generator
+;===============================;
+
+#SPC
+{
+	#title "Order of the Holy Spirit"
+	#game "Haunted Castle / Mega Man X2"
+	#author "comp. K. Matsubara / arr. Hood"
+	#comment ""
+	#length "1:30"
+}
+
+;===============================;
+;	Samples
+;===============================;
+
+#path "HolyWater"
+
+#SAMPLES
+{
+	#holycross
+
+	"M.M.P.R.T.M. Sawtooth.brr"
+	"Area88 Overdrive.brr"
+	"M.M.X. Marimba.brr"
+
+	"Douk. 2 Flute.brr"
+	"M.M.P.R. Distorted GTR.brr"
+	"Sonic 3 Slap Bass II.brr"
+
+	"F.F.6. Power Snare.brr"
+	"F.F.6. Bass Drum.brr"
+	"R.8. Tom.brr"
+	"Chrono Closed H.brr"
+	"Chrono Open H.brr"
+	"Deadly Ride Bell.brr"
+	"F.F.5. Crash Cym.brr"
+}
+
+;===============================;
+;	Instruments
+;===============================;
+
+#INSTRUMENTS
+{
+	"F.F.6. Power Snare.brr" $FF $E0 $B8 $07 $A8 ; @30 power snare
+	"F.F.6. Bass Drum.brr" $FF $E0 $B8 $07 $A8 ; @31 bass drum
+	"R.8. Tom.brr" $FF $F2 $B8 $10 $00 ; @32 tom
+	"Chrono Closed H.brr" $FF $E0 $B8 $0B $70 ; @33 closed hat
+	"Chrono Open H.brr" $FF $E0 $B8 $0B $70 ; @34 open hat
+	"Deadly Ride Bell.brr" $BF $35 $B8 $0C $00 ; @35 ride bell
+	"F.F.5. Crash Cym.brr" $FF $F0 $B8 $07 $A8 ; @36 crash cym.
+
+	"M.M.P.R.T.M. Sawtooth.brr" $FF $8A $B8 $02 $44 ; @37 sawtooth
+	"Area88 Overdrive.brr" $FF $EA $B8 $03 $D0 ; @38 overdrive
+	"M.M.X. Marimba.brr" $FF $8A $B8 $04 $00 ; @39 perc. organs
+
+	@2 $FF $EA $B8 $06 $00 ; @40 glock
+	"Douk. 2 Flute.brr" $FC $EA $B8 $04 $00 ; @41 flute
+	"M.M.P.R. Distorted GTR.brr" $FE $EA $B8 $05 $D0 ; @42 dist guitar
+	"Sonic 3 Slap Bass II.brr" $FF $E4 $B8 $05 $B0 ; @43 slap bass
+}
+
+;===============================;
+;	Main Macros
+;===============================;
+
+	"@echo = $F4 $03"
+	"@leg = $F4 $01"
+	"@vol = $FA $03 $00"
+
+	"@end = [ r2 ]20"
+
+;===============================;
+;	Instrument Macros
+;===============================;
+
+	"@sawtooth = @37 o4 v245 | $FA $03 $CF | $DE $30 $10 $40"
+	"@overdrive = @38 o5 v225 | @vol | $DE $30 $10 $40"
+		"@on = $EC $00 $0B $02"
+		"@off = $EC $00 $00 $00"
+	"@marimba = @39 o3 v255 | @vol | $DF"
+
+	"@glock = @40 o3 v200 y7 | @vol | $DE $10 $10 $30"
+	"@flute = @41 o4 v225 y7 | @vol | $DE $10 $10 $30"
+		"(F00) = $ED $7F $F4 ^2^8"
+		"(F10) = $ED $7F $EF ^2"
+	"@distguitar = @42 o3 v225 y8 | @vol | $DE $30 $10 $40"
+	"@slapbass = @43 o3 v215 y11 | @vol"
+
+;===============================;
+;	Percussion Macros
+;===============================;
+
+	"@snare = @30 o4 v255 y9 | $FA $03 $2F | c"
+	"@kick = @31 o4 v230 y9 | $FA $03 $2F | c"
+	"@tom = @32 o3 v200 | @vol"
+
+	"@closed = @33 o4 v170 y8 | @vol | c"
+	"@open = @34 o4 v170 y8 | @vol | c"
+	"@ride = @35 o3 v255 y8  | $FA $03 $BF | c"
+	"@crash = @36 o4 v255 | $FA $03 $5F | h0 $EE $00 | $DF | c"
+
+;===============================;
+;	Echo Values
+;===============================;
+
+	$EF $FF $32 $32
+	$F1 $03 $50 $01
+	$F4 $02
+
+;===============================;
+;	Extras
+;===============================;
+
+	"Channel # = #"
+
+;===============================;
+;	Don't mess with this
+;	unless you know what you're doing!
+;===============================;
+
+#if VERSION == 1
+	"@charlotte = $EE $2F" ; Default Ver. | f# minor
+#endif
+
+#if VERSION == 2
+	"@charlotte = h0 $EE $F0" ; Crucifix Held Close | g minor
+#endif
+
+#if VERSION == 3
+	"@charlotte = h-2" ; Custom Ver. | e minor
+#endif
+	
+;===============================;
+;	Global Volume / Tempo
+;===============================;
+	w105 t47
+;===============================;
+
+;===============================;
+	Channel #0 / @charlotte
+;===============================;
+
+@sawtooth y9 | l16
+(000)[ f+ g+ a f+ g+ a b g+
+a b > c+ < a b > c+ d < b
+f+ g+ a f+ g+ a b g+
+a b g+ a ] f+ q7A f+ q7F f+8
+* f+4
+
+@overdrive
+[ @on c+8. @off f+8. a8 c+2
+c-8. ] c+8. < b8 a q77 a q7F g+ q77 g+ q7F a b8. >
+* d8. f+8 a q77 a q7F g+ q77 g+ q7F a b8.
+
+[ @on f+4 @off f+ e8 d f+ q77 f+ q7F f+ c+4^ ]
+f4 g+ b8 g+ g+ q77 g+ q7F g+ a4^
+* y11
+@on f8. @off d+8. f8 g+ q77 g+ q7F f+4.
+
+@marimba y9
+(005)[ a > c+ f+ c+ f+ a c- e
+b c- e g+ < g+ b > e < g+ ]2
+
+@overdrive
+a g+ f+ g+ a2.
+g+ f+ f f+ g+2.
+
+l8
+< [ @on f+. @off e. d. d. d e ]2
+ @on f+. @off e. d > c+. < b. g+8 a1
+
+;===============================;
+	Channel #1 | @charlotte
+;===============================;
+
+@sawtooth y11 | $FA $02 $F4 | l16
+(000) f+ q7A f+ q7F f+8
+(000) f+4
+$FA $02 $00
+
+@overdrive 
+< @on a2 @off g+2 f+2 f+ q77 f+ q7F f q77 f q7F f+ g+8.
+@on a2 @off g+2 f+2 > f+ q77 f+ q7F f q77 f q7F f+ g+8.
+
+[ @on d4 @off d c+8 c- c+ q77 c+ q7F c+ < a4^ > ]
+c-4 f g+8 f f q77 f q7F f f+4^
+* y9
+@on g+8. @off f+8. g+8 b q77 b q7F a4.
+
+@marimba y11 | $FA $02 $F4
+q7C (005)
+$FA $02 $00
+q7F > c+ f+ a f+ a > f+ < e b >
+g+ < e b g+ c- e b c-
+
+@overdrive
+f+ e f+ e f+2.
+f d+ c+ d+ f2.
+
+r1
+
+l8
+@on c+. @off < b. a. a. a b >
+@on c+. @off  < b. a > a. g+. e f+1
+
+@end
+
+;===============================;
+	Channel #6
+;===============================;
+
+(700)[ y8 @crash2. @echo @kick4 @echo
+y11 @crash2. @echo @kick4 @echo ]
+
+@glock | @charlotte | l16
+[ @leg f+ f f+ g g+ g f+ f @leg ]3
+
+l32
+@leg f+ g g+ a a+ b > c c+ d d+ e f f+ g g+ a @leg
+
+y8 @crash2^8
+
+@flute | @charlotte | l16
+[ c+ c c+12 f+12 a12 ] g+2 <
+a q77 a q7F g+ q77 g+ q7F a b8. (F00)
+
+@flute
+* > c+2 <
+a q77 a q7F g+ q77 g+ q7F a b8.
+
+d c+ d > d4^ < c+ c c+ > c+4^
+< c- < a+ b > b4^ c+ c c+ > c+4^
+< d c+ d > f+4^ < c+ c c+ > f+4^
+< c- < a+ b > b8 a8 g+ g+ q77 g+ q7F f+4.
+
+@flute | l8
+f+. a. g+. e4..
+f+. a. g+. b4..
+d2 a. > d. f+ f2 (F10)
+
+r1^1
+
+@flute
+> c+. < b. a > a. g+. e f+1
+
+@end
+
+;===============================;
+	Channel #3 | @charlotte
+;===============================;
+
+@distguitar | l2
+(999)[f+1]3 d e
+
+f+ e d+ df+ e d+ d
+
+b a c+ f+b a c+ f+
+
+[[ f+1 f+1
+d d8. d8. d8 c+1 ]]2
+
+@end
+
+;===============================;
+	Channel #4 | @charlotte @echo /
+;===============================;
+
+@slapbass | l8
+q7F (999)3 d2 e2
+[ f+ > f+16 < f+ f+16 > f+ < e > e < e16 e16 > e
+< d+ > d+16 < d+ d+16 > d+ < d > d < d16 d16 > d ]2
+
+[ c- b c-16 c-16 b < a > a16 < a a16 > a ]
+< c+ > c+ < c+16 c+16 > c+ < f+ > f+16 < f+ f+16 > f+
+*
+< c+16 c+16 > c+16 < c+ c+16 > c+ < f+ > f+ < f+16 f+16 > f+ <
+
+[ f+1 f+1 d2 d. d. d c+2 ] c+. c+. c+
+
+l16
+* c+ c+ c+ d+ q75 d+ q7F f q75 f q72 f
+
+@end
+
+;===============================;
+	Channel #5
+;===============================;
+ 
+ l16
+[ @snare4 @echo @kick4 @tom y8 b+ y9 b+8 y12 b8. y8 ] a8
+@echo @snare4 @echo @kick8. @tom y8 b+32 b32 y9 b+8. y12 b8. y8 a y9 a
+@echo * a
+ [ @echo q7C @snare32 q7D @snare32 q7F @snare8. ] @echo
+@tom y8 b+ b+ y12 b a
+*
+q7C @snare32 q7D @snare32 q7F
+[ @snare q7C @snare q7F ]2 @echo
+
+[ [[ @kick8 @echo @snare @echo @kick8 @kick @echo @snare8 @echo
+@kick8 @echo @snare8 @echo @kick @kick @echo @snare8 @echo ]]3
+@kick8 @echo @snare @echo @kick8 @kick @echo @snare8 @echo ]
+@kick8 @echo @snare8 @echo @kick @kick @echo @snare @snare @echo
+* @kick8 @echo @snare8 @echo
+@kick @echo q7C @snare32 q7D @snare32 q7F @snare @snare @echo
+
+ [[ [ @kick4 ]7 @kick8 @echo @snare @snare  @echo
+ [ @kick @kick8 @kick @echo @snare4 @echo @kick8. @kick8. ] @kick8
+* @echo @snare @snare @echo ]]2
+
+@end
+
+;===============================;
+	Channel #2 | @echo /
+;===============================;
+
+r4 [ @open2 ]7 @open4
+
+[ @closed16 q79 @closed16 q7F @open16 q79 @closed16 q7F ]16
+[ @ride8 @ride8 ]16
+
+[[ [ q74 @closed16 q79 @closed16 q7F @closed16 q79 @closed16 q7F ]8
+
+[ @open4 ]8 ]]2
+
+@end
+
+;===============================;
+	Channel #7 | @echo / r1^1
+;===============================;
+
+l1
+(700)
+
+[ r2 ]8 y11 @crash r1^1^1
+
+l8
+[[ y8 @crash1 y11 @crash1
+[ y8 @crash2 y11 @crash. y8 @crash. y11 @crash ]2 ]]2
+
+@end
+
+;===============================;
+;	AddmusicK 1.0.6
+;===============================;
+
+#amk 2

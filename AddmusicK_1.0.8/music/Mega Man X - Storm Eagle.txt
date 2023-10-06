@@ -1,0 +1,203 @@
+#amk 2
+
+#spc
+{
+#title "Storm Eagle"
+#author "Capcom"
+#game "Mega Man X"
+#comment "Ported by brickblock369"
+}
+
+#path "Storm Eagle"
+#samples
+{
+#optimized
+"1A Guitar.brr"
+"1E or 1F Guitar.brr"
+"14 Cymbal.brr"
+"15 Bass Drum.brr"
+"16 Snare Drum.brr"
+"18 Brass.brr"
+"19 Strings.brr"
+"21 Bass.brr"
+}
+
+#instruments
+{
+"1A Guitar.brr" $8F $E0 $00 $03 $00 ;30
+"1E or 1F Guitar.brr" $8F $E0 $00 $04 $08 ;31
+"14 Cymbal.brr" $8F $F0 $00 $05 $A0 ;32
+"15 Bass Drum.brr" $8F $E0 $00 $03 $D5 ;33
+"16 Snare Drum.brr" $8F $E0 $00 $03 $D5 ;34
+"18 Brass.brr" $8F $F8 $00 $08 $10 ;35
+"19 Strings.brr" $8F $E0 $00 $03 $00 ;36
+"21 Bass.brr" $8F $F0 $00 $03 $80 ;37
+}
+
+t70
+
+$EF$FF$9D$63
+;$EF$FF$B8$48
+$F1$03$44$01
+$F5$34$33$00$D9$E5$01$FC$EB
+
+
+(!100)[$F4$09]
+(!101)[$ED$0F$F6] ;guitar chunk
+
+"L04=v85"
+"L06=v100"
+"L0A=v125"
+"L0D=v145"
+"L12=v170"
+"L14=v185"
+"L18=v190"
+"L1A=v200"
+
+"BD=@33 y11 $F4$03 L1A"
+"SD=@34 y9 $F4$03 L18"
+"BD1=@33 L1A"
+"SD1=@34 L18"
+$F4$02
+#0
+[[r2]]8
+/
+@31 (!100, -1) (!101, 3) h2
+o3 y8 L06 $DF
+l16 q4f [ [[br]]8 [[f+r]]8 [[gr]]8 [[ar]]4 [[a+r]]4 ]2
+[ [[gr]]8 [[a+r]]8] [[br]]4 >[[c+r]]4 [[dr]]4 [[f+r]]4
+* q7f
+L0D  y10
+[[(20)[@31 o3 $DE$20$0B$60 b8 b8 > b8 < b8 b8 > b8 < b8 > a2. < f+8 a8] a+8]]2
+$DE$00$0B$70
+(0)[ r4 o4 f+8 r4 f+8 r8 e4$DE$00$0B$70^2 r4.]2
+
+#1
+@31 (!100, -1) (!101, 3)
+L0D 
+[[(0) $DF]]2
+/
+@35 L06 (!0, 0)
+o5 l16
+(10)[bbaabbf+f+]16
+[ [[ggddggbb]]2
+[[a+a+f+f+]]3 c+c+a+a+]
+f+dc-f+dc-f+d
+gec+gec+ge
+af+daf+daf+
+baf+baf+ba
+*
+(10)16
+
+#2
+o3
+ h2  L0D y10
+[[(20) a+8]]2
+/
+y12 @30 > $DE$20$0B$30 h0 q6f (!100, -1) (!101, 3)
+(21)[b2^8 a+8 b8 > c+8 d12 c+12 c-12 f+2^8 r8
+g4. f+16 e16
+f+4. e16 d16]
+c+4. < f+16 f16
+f+4. r8
+*
+> q7f c+4. r8 f+4. r8 y12
+l8 [gdgbgdgb>c+<ba+>c+<ba+>c+]<a+ >
+d4. r8 e4. r8 f+8. r16 e8 d2 r8
+* < b16 a16
+b4^16 r16 y13 f+16 e16
+f+4^16 r16 y14 d16 c+16
+d4^16 r16 < y15 b16 a16
+b4^16 r16 y16 f+16 e16
+f+4^16 r16 y17 d16 c+16
+d4^16 r16 < y18 b16 a16 b2. r4 h2
+L0D y10
+[[(20) a+8]]2
+
+#3
+[[r2]]7
+r8 o5
+$f4$03 BD1 c16 c16 SD1 c4 $f4$03
+/
+[[ (30)[BD c4 SD c4 BD c8 c8 SD c4
+BD c8 c8 SD c8 BD c4 c8 SD] c4]]3
+* c8 c16 c16
+[[BD c4 SD c4 BD c8 c8 SD c4]]3
+BD c4 SD c4 BD c8 c8 SD c8 c16 c16
+(30) c8 c16 c16
+BD c4 SD c4 BD c8 c8 SD c4
+BD c4 SD c4 BD c8 c8 SD c8 BD c8
+[c8 c8 SD c8 BD c4 c8 SD c8 BD c4
+c8 SD c4 BD c8 c8 SD c8] c16 c16
+BD * BD c8
+* c16 c16
+
+#5
+[[r2]]7
+r8^32
+ o5
+@33 y11 $F4$03 L18 c16 c16 @34 y9 $F4$03 L14 c8..
+/o3
+@37
+l8L1A y10
+[[ [ bb>L0D b< L1A b]2
+(50)[f+f+>L0Df+<L1Af+]2
+(51)[gg>L0D g<L1Ag]2
+aa>L0D a<L1Aaa+a+>L0Da+<L1Aa+]]2
+(51)2
+(50)2
+bb>L0Db<L1Ab>c+c+L0D>c+<L1Ac+
+ddL0D>d<L1Ad (50) <
+(51)2
+(50)2
+[[bb>b<bb>b<bb4b>b<bbf+aa+]]4
+
+#4
+(!100, -1) (!101, 3) h2
+L06 @31 o4 r16
+h2
+(60)[r4 $DE$30$0B$60 f+8 r4 f+8 r8 e4^2 r4.] r4 f+8 r4 f+8 r8 e8^2. r8.
+/
+L12 y8 @36 q6f $DF h0
+(21)
+> c+4. < f+16 f16
+f+4. r8
+(21)
+> c+4. r8 f+4. r8
+[r4 g4 a8 b4^16 r16
+a+4 g+4 f+8] a+4^16 r16
+b4. r8
+> c+4. r8
+d4 c+8 < b8^4. r8
+*
+a+4 b16 a16
+b4^16 r16 y7 f+16 e16
+f+4^16 r16 y6 d16 c+16
+d4^16 r16 < y5 b16 a16
+b4^16 r16 y4 f+16 e16
+f+4^16 r16 y3 d16 c+16
+d4^16 r16 < y2 b16 a16 b2. r4
+L06 @31 r16 y10 (60)2
+
+#6 
+(!100, -1) (!101, 3) h2
+r16 L04 y12 @31 o3
+(20) a+8 (20) a+16
+/
+o4 y12 L06 $DF
+l16 q4f [ [[c-r]]8 [[c+r]]8 [[c-r]]8 [[er]]8 ]2
+[ [[dr]]8 [[c+r]]8] [[f+r]]4 [[er]]4 < [[ar]]4 > [[f+r]]4
+*
+<
+L0D y10
+[[(0)]]2
+r16 L04 y12
+[[(20) a+8]]2
+
+#7
+[[r2]]8
+/
+o4 @32 L14 y6
+[c4 r4 [[r2]]7]3
+c4 r4 [[r2]]3
+*4

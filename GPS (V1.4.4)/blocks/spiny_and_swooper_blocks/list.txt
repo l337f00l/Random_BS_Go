@@ -1,0 +1,2 @@
+300:0025	spinyblock.asm
+301:0025	swooperblock.asm

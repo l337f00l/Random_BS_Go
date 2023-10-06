@@ -1,0 +1,11 @@
+#jsr VolumeFade
+#asm VolumeFade
+{
+	!volume = $60		;the music will fade to this volume
+	!timer = $80		;how long the volume fades for
+	
+	mov $58, #!timer	;set fade timer
+	mov $59, #!volume	;set volume to fade to
+
+	ret
+}

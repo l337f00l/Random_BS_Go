@@ -1,0 +1,320 @@
+
+#spc
+{
+#game "Undertale (SMW)"
+#title "Ghost Fight"
+#comment "Original track by Toby Fox"
+#length "0:51"
+}
+
+#amk 2
+#path "Ghost Fight"
+#samples
+{
+#ghostfight
+"bass.brr"
+"brass.brr"
+"cymbal.brr"
+"kick.brr"
+"piano.brr"
+"snare.brr"
+"voice.brr"
+"ghost.brr"
+"crowd.brr"
+"trumpet.brr"
+}
+
+#instruments
+{
+"kick.brr" 	$FF $E0 $00 $05 $00 ; @30 KICK
+"snare.brr" 	$FF $E0 $00 $05 $00 ; @31 SNARE
+"bass.brr" 	$FF $E0 $00 $04 $38 ; @32 BASS
+"ghost.brr" 	$FF $E0 $00 $01 $06 ; @33 GHOST
+"brass.brr" 	$FF $E0 $00 $04 $11 ; @34 BRASS
+"piano.brr" 	$FF $F0 $00 $04 $1E ; @35 PIANO
+"voice.brr" 	$FF $E0 $00 $04 $24 ; @36 VOICE
+"cymbal.brr" 	$FF $F9 $00 $04 $00 ; @37 CYMBAL
+"crowd.brr"	$FF $E0 $00 $02 $00 ; @38 CROWD
+"trumpet.brr"	$FF $E0 $00 $04 $00 ; @39 TRUMPET
+}
+
+
+tuning[30]=-6
+tuning[31]=-6
+tuning[32]=-10
+tuning[33]=-5
+tuning[34]=-13
+tuning[35]=-3
+tuning[36]=0
+tuning[37]=-6
+tuning[39]=-4
+
+$EF $6D $38 $38
+$F1 $04 $45 $01
+
+(!100)[v200 $ED $7F $E0]
+(!101)[$ED $7F $F9]
+(!102)[$E8 $0C $50]
+
+#0 w200 t46
+l16
+$F4 $02 /
+y10
+o4 @33 v200
+
+(!100, -1)
+(!101, 2, 112)
+
+(1)[(!100, -1) (!101, 2, 128) v200 l8 q2f ga+>c<ga+ q7f > (!101, 0)(!100, -1) c16c+16r16d^16<]
+(2)[(!101, 2, 112) v200 l8 q2f ga+>c<ga+ q7f > (!101, 0)(!100, -1) c+16d16r16f^16<]
+(1)
+(3)[(!101, 2, 112) v200 l8 q2f ga+>c<g q7f (!101, 0)(!100, -1) f16f+16r16 (!100, 0) (!101, 0) v200gv100gr16]
+
+
+
+(1) (2) (1) 
+(!101, 2, 112) (40)[l8 q2f ga+>cd+ q7f (!101, 0)(!100, 0) $ED $7F $E0 v200 d16d+16r16  v200dv100dr16<]
+
+y4
+(1) (2) (1) 
+(!101, 2, 112) (40)
+
+
+(1) (2) (1) (3)
+
+[[y8 l16 v240
+o4 (15)[d+r>c+crc+cr<]2
+a+^gr gfr g^ $DD $0C $01 $AC $E8 $06 $70 ^4^8^
+v240(15)2
+a+r>cr
+l24  c+r48c^48r48r96<a+rr96
+
+l16 q7f g^ $DD $0C $01 $AC $E8 $06 $70 ^4^8]]2
+[r1]99
+#1
+[r1]4
+@32 o3 v220
+l16
+[[(5)[q2f g
+q7f gf+rfrerd+r<a+rarf+r>]
+
+(6)[q2f g
+q7f gf+rfrerd+rgrf+rdr]
+
+(5)
+
+(8)[q1f cc <
+q7f a+r>crc+r]
+
+drerf+rdr]]2
+
+(5)(6)(5)
+
+(8) q7f d e32r32 f+ g8^^32r32<a+32r32>
+
+[[q5fd+q3fd+q7fc+r
+<a+r
+gr
+q3fd+q3fd+q7fgr
+a+r>
+d+r
+[q5f g q3f g q7f <
+gr>
+fdrc]2 ]]4
+
+[r1]99
+#2
+[r1]8
+@35 v210
+y18
+l16 q4f 
+(7)[o4 g>dr<fgregrd+gr>frdr<]
+(9)[g>dr<fgregrd+gr>drc+r<]
+(7)
+fgrcfrgra+>cr<
+l48 q7f
+[a+aa+
+aa+a]2
+a+16
+
+(7) (9)
+l16
+o4 g>dr<fgregrd+gr>frd<a
+a+gercrera+f+rgr4
+
+[r1]99
+#3
+[r1]8
+@36 y10
+l16 v170
+o4 g^32 $DD $06 $12 $A5 ^16r32r4r
+r32r64c+64^r8
+c<q4fa+q7fg^ $E8 $0C $50 ^
+r2r4r8r
+
+
+
+
+
+
+v170 a+4>c4d8^16 $E8 $0C $60 ^16 v190 d+4
+(!102, 1, 16)
+
+v170 d8<
+v170 g8>
+v170 g8<
+v170 g8>
+(!102, 0)
+v170 f+d+r
+ d^v140d+v130dv170d+
+(!102, 1, 16)
+
+v170 d8<
+v170 a+8
+v170 g8
+v170 d+8
+v170 a+8
+(!102, 0)
+v170 ga^
+>
+v160d+dv160d+
+
+v170 d d< (!102, 1, 16)
+v170 a+8
+v170 g8
+v170 d+8
+v170 a+8
+
+(!102, 0)
+v170 >c<a^
+>
+v160d+dv160d+
+(!102, 1, 16)
+v170 d8
+v170 g8
+v170 c8
+v170 <a+8
+(!102, 0)
+v170 >c < a+ r
+v170 >c^^
+q4f
+<a+> q6f c
+q7f c+c< (!102, 1, 16)
+v170a+8
+v170g8
+v170d8
+(!102, 0)
+v170ff+rg4^
+
+tuning[38]=7
+v170 @38 o4 [y15c2<y5b2y15g2y5b2>]4
+
+[r1]99
+
+#5
+$DF
+[r1]8
+l16 o4 v170 @34
+c16 $E8 $20 $40 $ED $7F $EC ^64 $DD $07 $14 $A8  ^32^64 ^8^16r8r16
+r2
+r16
+v170 @34 o3
+
+f+f32r32d+ff+<a32r32>cd+c<a+32r32
+>>
+c^<a+48>c48^48<
+f+32f32d+
+c4d4d+4d4
+
+d+ $E8 $0C $50 ^
+v170<fr
+gr
+g+r
+>
+cdr<
+b $E8 $0C $8A  ^ $E8 $24 $B0 ^^^
+r2r4r
+>g+gg+
+ggd+rcr<g+r>
+d+rfd4^
+r2r4r8 q5f d+ q6f f
+q7f f+fd+r
+cr
+<gr
+ff+r $DE $18 $15 $80 g4^
+
+[[ y7 v150
+(20)[g+^>f+frf+fr<]2
+>
+$EE $60 d+^ $EE $00
+crc<a+r> $E8 $60 $30 c2^ v150 
+(20)2
+d+rfr
+l24 q7f f+r48g^48r48r96a+rr96
+q7f
+> l16
+c16 $DD $0A $0A $AF ^16 $DD $00 $0A $B1 $E8 $48 $30 ^4^8 ]]2
+[r1]99
+#4
+
+[r1]4
+
+@30 o4 v255
+[f4]16
+
+[l16
+v255@30fv130f
+v230@31g+^
+v255@30fv130f
+v230@31g+^
+v255@30fv130f
+v230@31g+
+v255@30f^v130f
+v230@31g+^]64
+
+#6
+[r1]12
+r2r4r16 $DE $18 $10 $60
+@39 o5 y15 v160
+c<a+>c
+<a+a+
+gr
+dr
+<
+a+r
+>
+gra $E8 $40 $60 f+4^
+r1r1
+
+<
+
+
+[[v120
+(30)[a+v70a+>v120a+ara+ar]2
+$EE $60 f^ $EE $00
+dr
+c<a+r>
+
+d16^32^32 $DD $00 $06 $A9 ^32^32 $DD $00 $08 $AA $E8 $48 $30 ^4^8
+v120
+(30)2
+
+drfr
+l24 q7f gr48a+^48r48r96>crr96
+q7f
+ l16
+d16 $DD $0A $0A $B5 ^16 $DD $00 $0A $B6 $E8 $48 $30 ^4^8 ]]2
+
+
+#7
+t46
+[r1]4
+l16
+
+[t36r
+t61r]32
+
+@37 o5
+[[
+[t36gt61^t36gt61g]3
+t36gt61gt36gt61^]]99

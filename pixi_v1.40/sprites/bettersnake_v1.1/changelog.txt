@@ -1,0 +1,3 @@
+v1.1
+-----
+Support to LM 3.0 (needs pixi 1.2.4)

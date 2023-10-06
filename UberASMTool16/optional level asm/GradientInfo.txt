@@ -1,0 +1,15 @@
+shbo4321
+
+        s    = Add/subtract select
+            0 => Add the colors
+            1 => Subtract the colors
+
+        h    = Half color math. When set, the result of the color math is
+            divided by 2 (except when $2130 bit 1 is set and the fixed color is
+            used, or when color is cliped).
+
+        4/3/2/1/o/b = Enable color math on BG1/BG2/BG3/BG4/OBJ/Backdrop
+
+
+
+00010011 = 13 = no BG3, but BG1, BG2, OBJ (sprites) on main screen 

@@ -1,0 +1,88 @@
+For info on proper GFX functioning when using the screen-scrolling pipes, scroll down to the section GETTING THE CORRECT GFX IN LEVELS WITH THE SCREEN-SCROLLING PIPES
+_____
+
+I organize different types of GFX files by groups of 100s, with some associated mnemomics:
+ 
+- 80-FF for basic layer 1 stuff — blocks, foreground, FG decoration, etc.
+- 100-1FF for ExAnimation and sprite GFX (SP1-4). (The common theme between ExAnimation and sprites being "movement.")
+- 200-2FF for standard layer 2 BGs. (The full BG2 slot is free in all levels, so that you can use this for larger layer 2 BGs.)
+- 300-3FF for Layer 3.
+
+ExGFX60-63 are special — alternate ExGFX files which can be used globally, set in ExAnimation. (These *must* be ExGFX60-63, and no other numbers.) ExGFX60 is the main file I've used for global GFX, and by default takes up all of the BG3 slot in every level. (But this can also be disabled for any level.)
+
+_____
+
+DESCRIPTION OF ALL INSERTED EXGFX FILES:
+
+Alternate ExGFX:
+
+ExGFX60: global GFX, drawn to BG3 in all levels by default. There are currently 14 scattered empty 8x8 spaces readily available for other GFX (+ 2 more for animation, too), or 10 if the thin pipes are restored to their original state.
+
+Layer 1:
+
+ExGFX80: Effectively a copy of ExGFX60, but can be used per-level (in BG2) if you have to disable global GFX in BG3
+ExGFX81: The GFX for the font used in the level selection and tutorial level(s), and for some notes elsewhere in other levels.
+ExGFX82: Screen-scrolling pipes main GFX (see level 112; and then 142 for a copy where drawn to BG3)
+ExGFX83: Expanded switch palace tileset (see level 11B)
+ExGFX84: Other miscellaneous blocks (see level 129)
+ExGFX85: GFX17, but with stripped-down version of global GFX in place of bush tiles, to be used in FG2. (See level 140, and Map16 15B0.)
+ExGFX86: GFX17, but with semi-stripped-down version of the screen-scrolling pipes in place of bush tiles, to be used in FG2. (Map16 page 13; see level 143)
+ExGFX87: Copy of GFX14, but clear pipes (test WIP)
+ExGFX88: Basically GFX1A, but for use in FG3 when placing layer 2 FG tiles using Underground 1
+ExGFX89: Placeholder for default combined GFX32+33, for use with the per-level Mario+animated tiles patch
+ExGFX8A: Few more tiles for alternative palette-row-3 big one-ways
+
+
+
+Sprites and ExAnimation:
+
+ExGFX100: Vanilla lava, but palette shifted to right; see level 115 for palette
+ExGFX101: sprite item box, for use with ExGFX334 in LG1. Overwrites orb, though.
+ExGFX102: Backup FG2 copy of global GFX + minor ExAnimation stuff for the screen-scrolling pipes (level 112)
+ExGFX103: ExAnimation for all-shape on/off line guides (per-level, not global), and allow-line-guide sprite-pass blocks. See example level 124. If you modify this, be sure to leave the blank line right below the actual line-guide GFX. (You can see the warning in the ExGFX file itself.)
+ExGFX104: Used for tutorial and level-select screen; demonstrates bumpties + any-time timed platforms and numbered multi-bounce shell; to be placed in SP4. (Also poison mushroom, though another copy of this in regular GFX04)
+ExGFX105: On/off stairs (ghost house) and escalator stuff
+ExGFX106: Various miscellaneous ExAnimation, useful blocks
+ExGFX107: Copy of 106, except big SMM-style animated one-way blocks instead of small (see level 139)
+ExGFX108: Pipe piranha megapack, a modification of GFX04 (for SP4). See example level 138
+ExGFX109: alternative palette-row-3 big one-ways
+ExGFX10A: Animated goal tape only. However, there's also a copy of this in ExGFX(level 129); so you can delete this one if you want
+ExGFX10B: coin stuff, level 13B or C?
+
+Layer 3:
+
+ExGFX301-32F: Optional vanilla layer 3 BG files. (32D is the fixed layer 3 BG for levels 9 and 115, and 15F [sic: dunno], to be able to easily enable it)
+
+ExGFX330 and 333: [deleted] 
+ExGFX331: Put this in LG1 to only display the ITEM BOX in a level (see level 13B). Requires RetainStatusBar UberASM in level. If you want a blue item box, see ExGFX334.
+ExGFX332: Put this in LG1 to only display the COIN COUNTER in a level (see level 13A). Requires RetainStatusBar UberASM in level.
+ExGFX334: For SPRITE item box only. Requires ExGFX101 in SP2, as well as SpriteItemBox.asm UberASM in level. (See palette, too?)
+ExGFX335: TIMER and COIN COUNTER. Requires RetainStatusBar UberASM in level. (Though use sprite item box if you want properly colored item box.)
+_____
+
+GETTING THE CORRECT GFX IN LEVELS WITH THE SCREEN-SCROLLING PIPES (OTHER THAN LEVEL 112):
+
+In short, any time you want to get the pipes' GFX to work properly in a new level, you basically just want to copy the same settings as in example level 112. If you're in 112, toward the top-right of LM, click the shiny block icon that's third from the end. Toward the bottom, click Copy Slot; and then go to the same menu in your new level, and click Paste Slot. 
+
+Then, still at the top of Lunar Magic, open the GFX Bypass menu (red poison mushroom), and make sure the BG2 slot has 82 in it. (Having 102 in the AN2 slot at the bottom also enables some of the arrow indicators to change when you use certain on/off pipes; though honestly, this effect is so subtle that I doubt anyone would miss it.) And that's it! 
+
+Remember that the screen-scrolling pipes' tiles are on Map16 pages 6 and 7 when using the normal BG2 slot for them. But if you need BG2 for something else, I made it so that ExGFX82 also can be inserted in BG3 — see level 142 for an example level (and the SSP tiles are on Map16 pages 16 and 17 in this case). Of course, like in level 142, if you want this elsewhere, you'll have to disable global GFX in your level, too, to free up BG3 for this. You can put whatever you want in BG2 here; though remember that there's also a backup version of the global GFX (ExGFX80) intended for BG2, too.
+
+_____
+
+Modifications of normal GFX files:
+
+- GFX03: free space where podoboo lava trail was remapped
+- GFX04: poison mushroom, another blank spot
+- GFX06: cluster fish effect put in blank spot, tile AB (see levels A and 120)
+- GFX13: Put flopping cheep-cheep GFX (normally GFX01, for SP2) together with normal swimming cheep-cheep GFX in GFX13, and swapped the former with the Yoshi fireball GFX, so that the fireballs can be available globally.
+- GFX17: F denotes tiles freed up so that additional overworld animation GFX can be put there
+- GFX19: very slight modifications to fix hills/mountain BG GFX errors
+- GFX1A: alteration to better cohere with cave layer 2 FG??
+- GFX28: tweaks for status bar remove. By default, will show nothing on status bar. If RetainStatusBar Uber used in a level with it, only timer displayed. No coin counter numbers (formerly MARIO and LUIG spot); coin and X before coin counter; item box outline.
+
+____
+
+OTHER NOTES:
+
+GFX04: According to the swooper disassembler, lower-right tile is truly unused. Plain white box is also for bonus game. Tile 4A (in YYCHR numbering) also unused except for chuck foot

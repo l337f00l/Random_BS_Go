@@ -1,0 +1,264 @@
+#amk 2
+
+#spc
+{
+    #title   "Battle 1"
+    #game    "Chrono Trigger"
+    #author  "Yasunori Mitsuda"
+    #comment "Ported by KevinM"
+}
+
+#path "ct-battle1"
+
+#samples
+{
+    "../default/00 SMW @0.brr"
+    "../default/01 SMW @1.brr"
+    "../default/02 SMW @2.brr"
+    "../default/03 SMW @3.brr"
+    "../default/04 SMW @4.brr"
+    "../optimized/05 SMW @8.brr"
+    "../optimized/06 SMW @22.brr"
+    "../optimized/07 SMW @5.brr"
+    "../optimized/08 SMW @6.brr"
+    "../EMPTY.brr"
+    "../optimized/0A SMW @9.brr"
+    "../default/0B SMW @10.brr"
+    "../optimized/0C SMW @13.brr"
+    "../EMPTY.brr"
+    "../optimized/0E SMW @29.brr"
+    "../optimized/0F SMW @21.brr"
+    "../EMPTY.brr"
+    "../EMPTY.brr"
+    "../optimized/12 SMW @15.brr"
+    "../EMPTY.brr"
+
+    "Snare.brr"
+    "Electric Bass (Finger).brr"
+    "Synth Voice.brr"
+    "Marimba.brr"
+    "Organ.brr"
+    "Kick.brr"
+    "Closed Hi-Hat.brr"
+    "Open Hi-Hat.brr"
+    "Tom.brr"
+    "Crash.brr"
+}
+
+#instruments
+{
+    "Snare.brr"                  $FF $E0 $A0 $05 $1C ; @30
+    "Electric Bass (Finger).brr" $FF $EC $A0 $03 $E2 ; @31
+    "Synth Voice.brr"            $FF $E6 $A0 $03 $F8 ; @32
+    "Marimba.brr"                $FF $E0 $A0 $0E $75 ; @33
+    "Organ.brr"                  $FF $E0 $A0 $06 $01 ; @34
+    "Kick.brr"                   $FF $E0 $A0 $06 $13 ; @35
+    "Closed Hi-Hat.brr"          $FF $E0 $A0 $0B $76 ; @36
+    "Open Hi-Hat.brr"            $FF $E0 $A0 $08 $1A ; @37
+    "Tom.brr"                    $FF $E0 $A0 $08 $97 ; @38
+    "Crash.brr"                  $FF $EE $A0 $05 $8A ; @39
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w150       t65
+
+; Original volumes: w210
+
+;==================;
+;       Echo       ;
+;==================;
+$EF $0E $28 $28
+$F1 $04 $5A $01
+
+;==================;
+;      Macros      ;
+;==================;
+"Snare   = @30 o4"
+"Bass    = @31"
+"Voice   = @32"
+"Marimba = @33"
+"Organ   = @34 $DE $00 $0B $20 $EA $20"
+"Kick    = @35 o4"
+"CHat    = @36 o4"
+"OHat    = @37 o4"
+"Tom     = @38 o4"
+"Crash   = @39 o4"
+"rest    = 123"
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $F4 $02
+Snare v230 y8 l8 g16 g16 g
+
+Bass v200 y10 o3 $F4 $03 [
+a+4 > c+ < a+16 r. a+ > c+ < a+
+a+4 > c+ < a+16 r. a+ > f16 g+16 a+ <
+a+4 > c+ < a+16 r. a+ > c+ < a+
+a+4 > c+ < a+ > a+ g+ f16 d+16 c+ <
+] / *7
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1 (rest)[r2]8 ^4 /
+
+Voice v200 y10 o4
+[[g+1 a+1 b1 > c+1 <]]2 > d+1^1^1^1 <
+
+Marimba v150 l16 $DC $60 $01
+(10)[$E8 $60 $A5 a+8 < a+ > d+ < g+ > f g+ < a+ >]
+
+[[
+(12)[
+$DC $C0 $13
+$E8 $60 $96 d+ < g+ > f < a+ > g+ < a+ > d+ < g+ >
+$E8 $60 $A5 f < a+ > a+ < a+ > d+ < g+ > f < a+ >
+]
+
+$DC $C0 $01
+(11)[$E8 $60 $96 g+ < a+ > d+ < g+ > f < a+ > g+ < a+ >]
+(10)
+]]7
+
+(12)
+$DC $60 $0A (11)
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2 (rest)8 ^4 /
+
+Voice v179 y13 o4 $DF
+[[d+1 f+1 f+1 g+1]]2 a+1^1^1^1
+
+Organ v162 y12 o5
+[d2 c2 < b4 > c4 < b4 g4 a2 g2 f4 g4 e4 c4 >] << a1^1^1^1 >>
+* < d1^1^1^1 >
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3 (rest)8 ^4 /
+
+Voice v170 y7 o3 $DF
+[[b1 > c+1 d+1 f1 <]]2 > g+1^1^1^1
+
+Organ v153 y8
+[a2 a2 g4 g4 g4 d4 e2 d2 c4 d4 c4 < a4 >] < f1^1^1^1 >
+* < a1^1^1^1 >
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4 v230 l8
+Kick y10 r4 g4 Snare y8 g
+[Kick y10 g4 g Snare y8 g]2
+Kick y10 g g16 Snare y8 g
+Kick y10 g16 Snare y8 g
+Kick y10 g g4 Snare y8 g
+*
+(45)[Kick y10 g g. g16 Snare y8 g]
+Kick y10 g g g Snare y8 g
+Kick y10 g16 Snare y8 g16 /
+
+Kick y10 g4
+[[
+Snare y8 g
+(40)[
+Kick y10 g4 g Snare y8 g
+Kick y10 g g. g16 Snare y8 g
+]
+(42)[
+Kick y10 g g g Snare y8 g
+Kick y10 g g. g16 Snare y8 g
+]
+(40)
+(41)[
+Kick y10 g g g Snare y8 g
+Kick y10 g16 Snare y8 g16
+]
+Kick y10 g. g16
+]]2
+Snare y8 g
+
+(40)2
+(43)[
+Kick y10 g g. g16 Snare y8 g
+Kick y10 g4 g Snare y8 g
+Kick y10 g g16 Snare y8 g
+Kick y10 g16 Snare y8 g
+Kick y10 g16 Snare y8 g16
+]
+Kick y10 g. g16 Snare y8 g
+
+(41)
+(44)[Kick y10 g4 Snare y8 g]
+(40)
+(42)
+(40)3
+(45)2
+(40)
+(41)
+(44)
+(40)
+(42)
+(40)3
+(43)
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5 y3 l16 r4
+(50)[CHat v220 c8 v166 c c]6
+(53)[v220 c8 OHat v200 f8 CHat v220 c8 OHat v200 f8]
+(50)8 /
+
+(50)5
+(51)[v220 c8 v166 c32 v178 c32 v190 c]
+(50)
+(52)[v200 c8 OHat f8]
+(50)6
+(53)
+(50)5
+(51)
+(50)
+(52)
+(50)13
+(51)
+(50)
+(52)
+[[
+(50)7
+Tom v226 y16 < g4 y3
+(50)5
+(51)
+(50)
+(52)
+(50)13
+(51)
+(50)
+(52)
+]]2
+(50)8
+
+;==================;
+;    Channel #6    ;
+;==================;
+#6
+Kick v158 y10 g4
+Crash v230 d1^1^1^2
+(60)[Tom v225 y9 c+16 c+8 c+8 v240 y12 < a+16 a+8] /
+
+Crash v230 y10 d1^1^1^1 d1^1^1^2
+(60)
+Crash v230 y10 d1^1^1^4
+[[
+Tom v225 y9 c+4 v240 y12 < a+4
+Crash v230 y10 d1^1^1^2^4
+(60)
+Crash v230 y10 d1^1^1^4
+]]2
+Tom v225 y9 c+4 v240 y12 < a+4 v255 y16 g4

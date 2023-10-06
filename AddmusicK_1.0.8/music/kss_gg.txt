@@ -1,0 +1,223 @@
+#amk 2 ; GG!
+
+#spc
+{
+#title "Green Greens"
+#game "Kirby Super Star / SMW"
+#author "Jun Ishikawa, Dan Miyakawa"
+#comment "Ported by Anas"
+}
+
+"bass_1=@14 $ED$3D$B2"
+"bass_2=@4 $ED$7F$E0"
+"flute_1=@0 h-12 $ED$1F$E0"
+"flute_2=@5 h0 $ED$7A$E0"
+"flute_3=@0 h0 $ED$7F$E0"
+"xylo_1=@3 h-12 $ED$1C$E0"	; xylophone 1
+"xylo_2=@3 h-12 $ED$3C$B3"	; xylophone 2
+"trump=@6 h0 $ED$5A$A0"		; trumpet
+
+"snare=h0 @10 $ED$7F$6A c"
+"c_hat=h0 @22c"				; closed hi-hat
+"snr_note=h0 c"				; note for snare
+
+"pan_1=y13"
+"pan_2=y12"
+"pan_3=y11"
+"pan_4=y9"
+"pan_5=y8"
+"pan_6=y7"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    1st channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#0 w255 t50
+$EF$2F$19$19
+$F1$04$32$00
+$F5$7F$00$00$00$00$00$00$00
+
+[[r3]]10
+
+/y10 v140 o3
+
+$EF$2C$1E$1E
+$F1$04$CE$01
+
+(1)[q5b snare12 q58 snr_note24 q56 snr_note24 q5b snr_note12 q58
+snr_note24 q56 snr_note24 q5b snr_note12 q58 snr_note24 q56 snr_note24 q5b
+snr_note24 q58 snr_note24 q59 snr_note24 q58 snr_note24]7
+
+q5b snr_note12 q59 snr_note24 q58 snr_note24 q5b snr_note24 q58 snr_note24 q59
+snr_note24 q58 snr_note24 q5b snr_note12 q59 snr_note24 q58 snr_note24 q5b snr_note24 q59
+snr_note24 q58 snr_note24 q59 snr_note24 q5b snr_note12 q55 snr_note24 q5b snr_note8 pan_2
+
+q56 c_hat24 q55 c_hat24 y10 q5b snare12 snr_note12 pan_2
+q58 c_hat24 q55 c_hat24 q56 c_hat24 q55 c_hat24 y10
+
+(1)2
+
+v130 [q7b snr_note24 q78 snr_note24 q79 snr_note24 q78 snr_note24 q7c
+snr_note24 q78 snr_note24 q79 snr_note24 q78 snr_note24 q7b snr_note24 q78
+snr_note24 q79 snr_note24 q78 snr_note24 q7c snr_note24 q78 snr_note24 q79
+snr_note24 q78 snr_note24]7
+
+v150 q7b snr_note12 snr_note24 q7a snr_note24 q7b snr_note12 snr_note24 q7a
+snr_note24 q7b snr_note3 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    2nd channel                                                                       ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#1 bass_1 v195
+q7b o2 g24 q2b g12 q7a g24 q2b
+g12 q2a g12 q2b g12 r6 q7a
+
+g=5 $DD$05$01$95 ^32 $DD$05$01$97 ^=5 
+
+q2a > c6 r2 c6 r2 q2a d6 r2 r12 q1a g12 g12 g12 g12 r4
+
+/bass_2 v140 
+
+(2)[q1b o2 c6 q19 < g6 > c6 < g6]2 
+
+q1b o2 d6 q19 < a6 > g6 < g6 
+
+(2)3
+
+q1b o2 d6 q19 < a6 > e6 q2b < e6 q2b a6 q2a
+> a6 g6 q2b < g6 q6b f8 q2b f12 r8 g12 g12 r6 
+
+(2)2
+
+bass_1 v195 o1
+q3c f6 q3b > c6 < a+6 q3c f6 
+
+[d+6 q3b a+6 g+6 > d+6 q3c < f6 q3b > c6 < a+6 q3c f6]3 
+
+q7b o1 g12 q79 g24 q78 g24 q7b > d12 q79 d24 q78 d24 q2b g8 r=40 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    3rd channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#2 r=80 flute_1 v115 pan_2
+q6b o5 f24 q6a f24 q1c f12 r12 
+
+[q16 < < g12 q1b > g12 g12 g12 g12 g12 g12 g12]2
+
+q16 o3 a12 q1b > a12 a12 a12 a12 a12 a12 a12 r12 q1c
+a12 a12 a12 > d12 r4 
+
+/flute_2 v117 
+
+(3)[q7a < < g12 q2b > g12 g12 g12 g12 g12 g12 g12]2
+
+q7a o3 a12 q2b > a12 a12 a12 < b12 > b12 b12 b12 
+
+(3)3
+
+q7a o3 a12 q2b > a12 a12 a12 q7a
+
+< g+12 q2b > g+12 g+12 g+12 q7a
+
+e24 a24 > c24 < a24 > c24 < a24 > c24 < a24 
+d24 g24 > c24 < g24 > c24 < g24 > c24 < g24 
+
+q6a a8 q2a a12 r8 b12 b12 r6 
+
+(3)2 
+
+$DE$10$0C$0A xylo_1 pan_3 v133
+q7a o5 c6 q7b < a+8 > c24 d6 q7b < a+8 > d24 d+6 q7b d8 d+24 q7a
+< g+6 g8 a+24 > c6 q7b < a+8 > c24 d6 q7b < a+8 > d24 q7b d+3 q3a g6 
+
+trump v127
+q7a < g8 q7b a+24 q7a > c6 q7b < a+8 q7c > c24 q7b d6 q7b < a+8 q7c
+> d24 q7c d+6 q7b d8 q7c d+24 q7a < g+6 q7a g8 q7c a+24 q7a > c6 q7b
+< a+8 q7c > c24 q7c d6 q7b < a+8 q7c > d24 q7a < f3 q2a b8 $DF r=40 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    4th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#3 r=80 flute_1 v115 pan_5
+
+q6b o5 g24 q6a g24 q1c g12 r12 
+
+[q16 < e12 q1b > e12 e12 e12 e12 e12 e12 e12]2
+
+q16 o4 d12 q1b > f12 f12 f12 f12 f12 f12 f12 r12 q1c
+c12 c12 c12 < b12 r4 
+
+/flute_2 v117 
+
+(4)[q7a e12 q2b > e12 e12 e12 e12 e12 e12 e12]2
+
+q7a o4 d12 q2b > f12 f12 f12 q7a
+< d12 q2b > f12 f12 f12 
+
+(4)3
+
+q7a o4 d12 q2b > f12 f12 f12 q7a
+
+< d12 q2b > e12 e12 e12 q7a
+
+< a24 > c24 e24 c24 e24 c24 e24 c24 
+< g24 > c24 e24 c24 e24 c24 e24 c24 
+
+q6a f8 q2a f12 r8 g12 g12 r6 
+
+(4)2
+
+$DE$10$0C$0A xylo_1 pan_4 v143
+q7a o5 d+6 q7b d8 d+24 f6 q7b d+8 f24 g6 q7b f8 g24 q7a
+c6 c8 d24 d+6 q7b d8 d+24 f6 q7b d+8 f24 q7b g3 q39 > c6 
+
+trump v127
+q7a < c8 q7b d24 q7a d+6 q7b d8 q7c d+24 q7b f6 q7b d+8 q7c f24 q7c
+g6 q7b f8 q7c g24 q7a c6 q7a c8 q7c d24 q7a d+6 q7b d8 q7c d+24 q7c
+f6 q7b d+8 q7c f24 q7b d3 q2b g8 $DF r=40 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    5th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#5 r=80 flute_1 v118 y10
+q6b o6 d24 q6a d24 q1c d12 r12
+
+[r12 q1b < c12 c12 c12 c12 c12 c12 c12]3 
+
+r12 q1c o5 f12 f12 g12 g12 r12 
+
+flute_3 $DE$30$0A$14
+q2b < g8 q7b g24 
+
+/$DE$14$0B$0A (5)[q7b o5 c2 q7b c8 q7b e24 q7b g12 q1b > c12 < b12 a12 q6b 
+g6 e8 q7b g24 q7b f6 q7b d8 e24 q7b d6 q7b e8 d24] 
+
+c2 q1b < g8 q7b g24 (5) 
+
+> c3^3 q6b c8 q7b c24 q2b d12 q5b e6 q2c c12 q7c d12 q7c c12 r2^3^3
+
+$DE$10$0C$0A xylo_1 pan_4 v143
+q7a c8 q7a d24 
+
+< flute_2 h12 v127 $DF pan_6 q79
+
+(6)[< < f24 > c24 pan_1 g+24 c24 pan_6 g+24 c24 pan_1 g+24 c24 pan_6
+< a+24 > f24 pan_1 a+24 f24 pan_6 a+24 f24 pan_1 a+24 f24 
+
+pan_6 < d+24 a+24 pan_1 > d+24 < a+24 pan_6 > g24 < a+24 pan_1 > d+24 < a+24 pan_6
+g+24 > d+24 pan_1 g+24 d+24 pan_6 < g+24 > d+24 pan_1 g+24 d+24 pan_6 < f24 > c24 pan_1
+g+24 c24 pan_6 g+24 c24 pan_1 g+24 c24 pan_6 < a+24 > f24 pan_1 a+24 f24 pan_6
+a+24 f24 pan_1 a+24 f24] 
+
+pan_6 o2 d+24 a+24 pan_1 > d+24 < a+24 pan_6 > g24 < a+24 pan_1 > d+24 < a+24 pan_6
+g+24 > d+24 pan_1 > c24 < d+24 pan_6 < g+24 > d+24 pan_1 g+24 d+24 
+
+xylo_2 h0 v147 pan_6 $FA$02$F4 (6) $FA$02$00
+
+pan_6 > q2b o2 g12 q7b g24 q7a > d24 pan_1 q2b < g12 q7b g24 q7a > d24 y10 q2a g8 r24 
+
+flute_3 v118 q2b > g8 q7b g24 

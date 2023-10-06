@@ -1,0 +1,12 @@
+So there are two patches here, in addition to a vanilla GFX28 file. The first one, RestoreFullStatusBar.asm, restores the status bar to its full original state, re-enabling the parts of it that had been disabled by LightweightMinimalistStatusBar.asm. (The life counter, points/score, and Yoshi coins; the timer and regular coins are restored to their original positions; and even the bonus star counter is re-enabled — though the level-end bonus and points counting is still disabled.) 
+
+If you do this, though, there are two other things you need to do and keep in mind:
+
+1) I've included a normal GFX28 file in this folder, that you should replace the GFX28 file in /Graphics/ with.
+
+2) KevinMRemoveStatusBar.asm (patch) and FreeRAM $87 are still used to make the status bar invisible globally. Now, if you've patched RestoreFullStatusBar.asm and if you use the RetainStatusBar.asm UberASM, you can re-enable the full status bar for any individual level you want, but still have it disabled by default in all other levels. But if you want the full status bar to be seen in *every* level by default, just go ahead and patch UnpatchPerLevelStatusEnable.asm (which unpatches KevinMRemoveStatusBar.asm). This will also free up FreeRAM $87 globally.    
+
+Finally, also watch out for any level where LG1 (the layer 3 slot) had been changed to something other than GFX28. Level C5, the intro/Welcome to Dino level, was one of those that you'll need to change back, if you need it. I think I listed all the others in the !HowTo level list file -- it should only be the test levels around level 140.
+
+
+(Oh and also note that RemoveOverworldLivesCounter.asm is patched by default, too.)

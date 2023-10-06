@@ -1,0 +1,425 @@
+; GPS block list
+;Custom blocks
+
+231:14E WontZeroUpthrownSprites.asm 
+
+276:025 one_way_down.asm
+277:025 one_way_right.asm
+278:025 one_way_left.asm
+;282:130 vinealways.asm
+286:1F0 Collectable1F0.asm
+289:025 DoorWithBetterHitbox.asm
+297:025 kill_muncher.asm
+299:130 kill_muncher-evenwithyoshiandstar.asm
+29A:025 spritepasskillmario.asm
+29B-29E:025 pixel_perfect_spike.asm
+2A0:130 sprite_solid.asm
+2A1:130 mario_solid.asm
+2A2:025 spritekiller.asm
+2A3:025 spriteonlytriangleright.asm
+2A4:025 spriteonlytriangleleft.asm
+2A9:025 instantpowerdown.asm
+2B0:025 OnSolid.asm
+2B1:025 OffSolid.asm
+2B2:025 OnDeathBlock.asm
+2B3:025 OffDeathBlock.asm
+2C0:025 instantfeather.asm
+2C1:130 throwblock_bumper.asm
+2C2:130 ThrowblockSpawner.asm
+2C4:002 WaterWithAutoSpriteBuoyancy.asm
+2D1:025 sprite_solid-ButMarioSolidWhenRidingYoshi.asm
+2D2:130 SingleUseOnoffSwitch.asm
+
+
+;Special Blocks Row 1
+
+314:025 Anti-P-speed.asm
+315:025 faceright.asm
+316:025 faceleft.asm
+317:025 DisableVerticalScrolling.asm
+318:025 EnableVerticalScrolling.asm
+319:025 DisableHorizontalScrolling.asm
+31A:025 EnableHorizontalScrolling.asm
+31B:025 Anti-BlindVerticalMovementCameraBlock.asm
+31C:025 KillStarPower.asm
+31D:130 ThrowblockFixedForSpinOscillation.asm
+31E:025 Layer2SpriteOnlyTriangleRight.asm
+31F:025 Layer2SpriteOnlyTriangleLeft.asm
+
+;Special Blocks Row 2
+
+324:025 MakeSpritesFallSlowly.asm
+325:025 ResetOnOffSwitchToOn.asm
+326:025 ResetOnOffSwitchToOff.asm
+327:025 WarpToSpecifiedSublevel.asm
+;328:025
+;329:025
+;32A:025 SpriteMorphBlockTemplate.asm
+32B:025 ReturnToOverworld-NoEvents.asm
+32C:025 instantpspeed.asm
+32D:025 SpriteKillerThatWontKillSpecifiedSprites.asm
+
+;
+
+32E:130 HorizontalPipeEnterableMidair.asm 
+
+; The next couple of blocks are designed so that if you upthrow a sprite like a shell at the space between multiples of these blocks, the sprite won't get "caught" between them and lose its angular momentum. This happens more easily the closer you are to them when upthrowing.
+
+33C:112 WontZeroUpthrownSprites.asm
+33D:130 WontZeroUpthrownSprites.asm
+
+; 
+
+34E:025 LavaWithAutoSpriteBuoyancyBottom.asm
+35E:025 LavaWithAutoSpriteBuoyancyTop.asm
+
+;
+
+354:025 SlopeEdge.asm
+
+; Pipes
+
+35C:130 VerticalExitPipe-AnyLevel.asm
+37C:130 HorizontalExitPipe-AnyLevel.asm
+3A0 FIREONOFF.asm
+;3A1 OneShotFlower.asm
+3A4 MustHold.asm
+3A5 WarpToSpecifiedSublevelEdited.asm
+3A6 spinyblock.asm
+3A7 swooperblock.asm
+;330:130 change_sprites_onoff.asm
+331 WarpToSpecifiedSublevel006.asm
+3C1:130 sprite_solid.asm
+3C2:130 mario_solid.asm
+3D0 hurtwithcape.asm
+3D2 hurtwhenholdingblock.asm
+3D3 hurtwhenholdingblock.asm
+3D4 hurtwhenholdingblock.asm
+3E2 hurtwhenholdingblock.asm
+3E3 hurtwhenholdingblock.asm
+3E4 hurtwhenholdingblock.asm
+3F2 hurtwhenholdingblock.asm
+3F3 hurtwhenholdingblock.asm
+3F4 hurtwhenholdingblock.asm
+3F0 Switches/Bswitch.asm
+
+; Additional non-global blocks, see especially level 129 (and ExGFX84)
+
+400:025 spritebounce.asm
+401:130 KeylockBlocks/16x32_V_Keyblk_T.asm
+402:130 KeylockBlocks/16x48_V_Keyblk_T.asm
+403:130 KeylockBlocks/32x16_H_Keyblk_L.asm
+404:130 KeylockBlocks/32x16_H_Keyblk_R.asm
+405:025 OutlinedSpriteSpawnBlocks/throwblock.asm
+406:025 OutlinedSpriteSpawnBlocks/key.asm
+407:025 OutlinedSpriteSpawnBlocks/spring.asm
+408:025 OutlinedSpriteSpawnBlocks/galoomba.asm
+409:025 OutlinedSpriteSpawnBlocks/babyyoshi.asm
+410:130 SpinJumpBlock.asm
+411:130 KeylockBlocks/16x32_V_Keyblk_B.asm
+412:130 KeylockBlocks/16x48_V_Keyblk_M.asm
+413:130 KeylockBlocks/48x16_H_Keyblk_L.asm
+414:130 KeylockBlocks/48x16_H_Keyblk_M.asm
+415:025 OutlinedSpriteSpawnBlocks/pswitch.asm
+416:025 OutlinedSpriteSpawnBlocks/shell.asm
+417:025 OutlinedSpriteSpawnBlocks/bomb.asm
+418:025 OutlinedSpriteSpawnBlocks/beetle.asm
+419:025	OutlinedSpriteSpawnBlocks/mechakoopa.asm
+41B:025 MuncherHaveToDuckUnder-8PixelsOffGround.asm
+422:130 KeylockBlocks/16x48_V_Keyblk_B.asm
+423:130 KeylockBlocks/48x16_H_Keyblk_R.asm
+424:130 boost_up.asm
+425:130 ConveyorRightFast-OnOff.asm
+431:100 FallingdonutBlock.asm
+435:130 ConveyorLeftFast-OnOff.asm
+441:25  SneakyMidway.asm
+
+; Coins
+
+444:025 Anti-coin.asm
+445:025 CoinIncreaseTime.asm
+448:025 PseudoCoin.asm
+
+570:025 aButtonAmmo.asm 
+
+;Screen-scrolling pipes - Map16 page 6
+;;2-way pipe caps
+;;;Vertical pipe caps
+0600:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_L.asm
+0601:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_R.asm
+0610:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_L.asm
+0611:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_R.asm
+0620:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_small.asm
+0630:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_small.asm
+
+;;;Horizontal pipe caps
+0602-0603:130		SSP_Tiles/pass_if_in_pipe.asm
+0612:0130		SSP_Tiles/caps/enterable/default/left_horizontal_pipe_cap_B.asm
+0613:0130		SSP_Tiles/caps/enterable/default/right_horizontal_pipe_cap_B.asm
+0621:0130		SSP_Tiles/caps/enterable/default/left_horizontal_pipe_cap_small.asm
+0622:0130		SSP_Tiles/caps/enterable/default/right_horizontal_pipe_cap_small.asm
+
+;;1-way pipe caps
+;;;Vertical caps
+;;;;Vertical pipe cap upwards travel
+0604:0130		SSP_Tiles/caps/exit_only/top_vertical_pipe_cap_L_exit.asm
+0605:0130		SSP_Tiles/caps/exit_only/top_vertical_pipe_cap_R_exit.asm
+0614:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_L.asm
+0615:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_R.asm
+0624:0130		SSP_Tiles/caps/exit_only/top_vertical_pipe_cap_small_exit.asm
+0634:0130		SSP_Tiles/caps/enterable/default/bottom_vertical_pipe_cap_small.asm
+;;;;Vertical pipe cap downwards travel
+0606:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_L.asm
+0607:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_R.asm
+0616:0130		SSP_Tiles/caps/exit_only/bottom_vertical_pipe_cap_L_exit.asm
+0617:0130		SSP_Tiles/caps/exit_only/bottom_vertical_pipe_cap_R_exit.asm
+0625:0130		SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_small.asm
+0635:0130		SSP_Tiles/caps/exit_only/bottom_vertical_pipe_cap_small_exit.asm
+
+;;;Enter horizontal caps in midair
+061C-061F:0130		SSP_Tiles/pass_if_in_pipe.asm
+060C:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/left_horizontal_pipe_cap_small.asm
+060D:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/right_horizontal_pipe_cap_small.asm
+060E:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/left_horizontal_pipe_cap_small.asm
+060F:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/right_horizontal_pipe_cap_small.asm
+062C:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/left_horizontal_pipe_cap_B.asm
+062D:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/right_horizontal_pipe_cap_B.asm
+062E:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/left_horizontal_pipe_cap_B.asm
+062F:0130		SSP_Tiles/caps/enterable/enter_horiz_midair/right_horizontal_pipe_cap_B.asm
+
+;;;Horizontal caps
+;;;;Top half of horizontal pipe caps
+0608-060B:0130		SSP_Tiles/pass_if_in_pipe.asm
+;;;;Horizontal pipe cap leftwards travel
+0618:0130		SSP_Tiles/caps/exit_only/left_horizontal_pipe_cap_B_exit.asm
+0619:0130		SSP_Tiles/caps/enterable/default/right_horizontal_pipe_cap_B.asm
+0626:0130		SSP_Tiles/caps/exit_only/left_horizontal_pipe_cap_B_exit.asm
+0627:0130		SSP_Tiles/caps/enterable/default/right_horizontal_pipe_cap_small.asm
+;;;;Horizontal pipe cap rightwards travel
+061A:0130		SSP_Tiles/caps/enterable/default/left_horizontal_pipe_cap_B.asm
+061B:0130		SSP_Tiles/caps/exit_only/right_horizontal_pipe_cap_B_exit.asm
+0636:0130		SSP_Tiles/caps/enterable/default/left_horizontal_pipe_cap_small.asm
+0637:0130		SSP_Tiles/caps/exit_only/right_horizontal_pipe_cap_B_exit.asm
+
+;;Stems
+R0640-0655:0130		SSP_Tiles/pass_if_in_pipe.asm
+
+;;Turn corners
+0628-062B:0130		SSP_Tiles/pass_if_in_pipe.asm
+0638:0130		SSP_Tiles/turn_up-right.asm
+0639-063A:0130		SSP_Tiles/pass_if_in_pipe.asm
+063B:0130		SSP_Tiles/turn_right-down.asm
+0648-064B:0130		SSP_Tiles/pass_if_in_pipe.asm
+0658:0130		SSP_Tiles/turn_left-up.asm
+0659-065A:0130		SSP_Tiles/pass_if_in_pipe.asm
+065B:0130		SSP_Tiles/turn_down-left.asm
+
+;;;4-way “turn corner”
+063E:0130		SSP_Tiles/pass_if_in_pipe.asm
+
+;;;Small turn corners
+063C:0130		SSP_Tiles/turn_up-right_small.asm
+063D:0130		SSP_Tiles/turn_right-down_small.asm
+064C:0130		SSP_Tiles/turn_left-up_small.asm
+064D:0130		SSP_Tiles/turn_down-left_small.asm
+
+; Allow line-guided sprites but block Mario:
+1003 iceblock.asm
+1013 icecoinblock.asm
+1023 frozen_pswitch.asm
+1004 icemultiplecoinquestionblock.asm
+1014 ice_anytile_block.asm
+1005 icecoinonrange.asm
+1006 icenoteblock.asm
+1007 iceonoffblock.asm
+100A ice_anytile_block_fireOnOff.asm
+1008:092 AllowHorizontalTopLineGuide-BlockMario.asm
+1018:092 AllowHorizontalTopLineGuide-BlockMario.asm
+1009:093 AllowHorizontalBottomLineGuide-BlockMario.asm
+1019:093 AllowHorizontalBottomLineGuide-BlockMario.asm
+
+
+; Per-level version of global custom block (see level 142)
+
+;1507:025 one_way_down.asm
+;1508:025 one_way_right.asm
+;1509:025 one_way_left.asm
+;1512:130 vinealways.asm
+;1516:1F0 Collectable1F0.asm
+;1517:025
+;1519:025 DoorWithBetterHitbox.asm
+;1527:025 kill_muncher.asm
+;1529:130 kill_muncher-evenwithyoshiandstar.asm
+;152A:025 spritepasskillmario.asm
+;1530:130 sprite_solid.asm
+;1531:130 mario_solid.asm
+;1532:025 spritekiller.asm
+;1533:025 spriteonlytriangleright.asm
+;1534:025 spriteonlytriangleleft.asm
+;1539:025 instantpowerdown.asm
+;1540:025 OnSolid.asm
+;1541:025 OffSolid.asm
+;1542:025 OnDeathBlock.asm
+;1543:025 OffDeathBlock.asm
+;1550:025 instantfeather.asm
+;1551:130 throwblock_bumper.asm
+;1552:130 ThrowblockSpawner.asm
+;1554:002 WaterWithAutoSpriteBuoyancy.asm
+;1561:025 sprite_solid-ButMarioSolidWhenRidingYoshi.asm
+;1562:130 SingleUseOnoffSwitch.asm
+
+
+
+; Level hub warps (level 12E, 12F, and 131)
+
+1800:025   LevelWarpBlocks/CursorTo12F.asm
+1801:025   LevelWarpBlocks/CursorTo12E.asm
+1802:025   LevelWarpBlocks/CursorTo1.asm
+1803:025   LevelWarpBlocks/CursorTo2.asm
+1804:025   LevelWarpBlocks/CursorTo3.asm
+1805:025   LevelWarpBlocks/CursorTo4.asm
+1806:025   LevelWarpBlocks/CursorTo5.asm
+1807:025   LevelWarpBlocks/CursorTo6.asm
+1808:025   LevelWarpBlocks/CursorTo7.asm
+1809:025   LevelWarpBlocks/CursorTo8.asm
+180A:025   LevelWarpBlocks/CursorTo9.asm
+180B:025   LevelWarpBlocks/CursorToA.asm
+180C:025   LevelWarpBlocks/CursorToB.asm
+180D:025   LevelWarpBlocks/CursorToC.asm
+180E:025   LevelWarpBlocks/CursorToD.asm
+180F:025   LevelWarpBlocks/CursorToE.asm
+1810:025   LevelWarpBlocks/CursorToF.asm
+1811:025   LevelWarpBlocks/CursorTo10.asm
+1812:025   LevelWarpBlocks/CursorTo11.asm
+1813:025   LevelWarpBlocks/CursorTo12.asm
+1814:025   LevelWarpBlocks/CursorTo13.asm
+1815:025   LevelWarpBlocks/CursorTo14.asm
+1816:025   LevelWarpBlocks/CursorTo15.asm
+1817:025   LevelWarpBlocks/CursorTo16.asm
+1818:025   LevelWarpBlocks/CursorTo17.asm
+1819:025   LevelWarpBlocks/CursorTo18.asm
+181A:025   LevelWarpBlocks/CursorTo19.asm
+181B:025   LevelWarpBlocks/CursorTo1A.asm
+181C:025   LevelWarpBlocks/CursorTo1B.asm
+181D:025   LevelWarpBlocks/CursorTo1C.asm
+181E:025   LevelWarpBlocks/CursorTo1D.asm
+181F:025   LevelWarpBlocks/CursorTo1E.asm
+1820:025   LevelWarpBlocks/CursorTo1F.asm
+1821:025   LevelWarpBlocks/CursorTo20.asm
+1822:025   LevelWarpBlocks/CursorTo21.asm
+1823:025   LevelWarpBlocks/CursorTo22.asm
+1824:025   LevelWarpBlocks/CursorTo23.asm
+1825:025   LevelWarpBlocks/CursorTo24.asm
+1826:025   LevelWarpBlocks/CursorTo131.asm
+1827:025   LevelWarpBlocks/CursorTo101.asm
+1828:025   LevelWarpBlocks/CursorTo102.asm
+1829:025   LevelWarpBlocks/CursorTo103.asm
+182A:025   LevelWarpBlocks/CursorTo104.asm
+182B:025   LevelWarpBlocks/CursorTo105.asm
+182C:025   LevelWarpBlocks/CursorTo106.asm
+182D:025   LevelWarpBlocks/CursorTo107.asm
+182E:025   LevelWarpBlocks/CursorTo108.asm
+182F:025   LevelWarpBlocks/CursorTo109.asm
+1830:025   LevelWarpBlocks/CursorTo10A.asm
+1831:025   LevelWarpBlocks/CursorTo10B.asm
+1832:025   LevelWarpBlocks/CursorTo10C.asm
+1833:025   LevelWarpBlocks/CursorTo10D.asm
+1834:025   LevelWarpBlocks/CursorTo10E.asm
+1835:025   LevelWarpBlocks/CursorTo10F.asm
+1836:025   LevelWarpBlocks/CursorTo110.asm
+1837:025   LevelWarpBlocks/CursorTo111.asm
+1838:025   LevelWarpBlocks/CursorTo112.asm
+1839:025   LevelWarpBlocks/CursorTo113.asm
+183A:025   LevelWarpBlocks/CursorTo114.asm
+183B:025   LevelWarpBlocks/CursorTo115.asm
+183C:025   LevelWarpBlocks/CursorTo116.asm
+183D:025   LevelWarpBlocks/CursorTo117.asm
+183E:025   LevelWarpBlocks/CursorTo118.asm
+183F:025   LevelWarpBlocks/CursorTo119.asm
+
+; I accidentally put the wrong block numbers in Map16 here at first,
+; so I had to put 11A-129 at the end, after the 160s
+
+1840:025   LevelWarpBlocks/CursorTo12A.asm
+1841:025   LevelWarpBlocks/CursorTo12B.asm
+1842:025   LevelWarpBlocks/CursorTo12C.asm
+1843:025   LevelWarpBlocks/CursorTo12D.asm
+1846:025   LevelWarpBlocks/CursorTo130.asm
+1848:025   LevelWarpBlocks/CursorTo132.asm
+1849:025   LevelWarpBlocks/CursorTo133.asm
+184A:025   LevelWarpBlocks/CursorTo134.asm
+184B:025   LevelWarpBlocks/CursorTo135.asm
+184C:025   LevelWarpBlocks/CursorTo136.asm
+184D:025   LevelWarpBlocks/CursorTo137.asm
+184E:025   LevelWarpBlocks/CursorTo138.asm
+184F:025   LevelWarpBlocks/CursorTo139.asm
+1850:025   LevelWarpBlocks/CursorTo13A.asm
+1851:025   LevelWarpBlocks/CursorTo13B.asm
+1852:025   LevelWarpBlocks/CursorTo13C.asm
+1853:025   LevelWarpBlocks/CursorTo13D.asm
+1854:025   LevelWarpBlocks/CursorTo13E.asm
+1855:025   LevelWarpBlocks/CursorTo13F.asm
+1856:025   LevelWarpBlocks/CursorTo140.asm
+1857:025   LevelWarpBlocks/CursorTo141.asm
+1858:025   LevelWarpBlocks/CursorTo142.asm
+1859:025   LevelWarpBlocks/CursorTo143.asm
+185A:025   LevelWarpBlocks/CursorTo144.asm
+185B:025   LevelWarpBlocks/CursorTo145.asm
+185C:025   LevelWarpBlocks/CursorTo146.asm
+185D:025   LevelWarpBlocks/CursorTo147.asm
+185E:025   LevelWarpBlocks/CursorTo148.asm
+185F:025   LevelWarpBlocks/CursorTo149.asm
+1860:025   LevelWarpBlocks/CursorTo14A.asm
+1861:025   LevelWarpBlocks/CursorTo14B.asm
+1862:025   LevelWarpBlocks/CursorTo14C.asm
+1863:025   LevelWarpBlocks/CursorTo14D.asm
+1864:025   LevelWarpBlocks/CursorTo14E.asm
+1865:025   LevelWarpBlocks/CursorTo14F.asm
+1866:025   LevelWarpBlocks/CursorTo150.asm
+1867:025   LevelWarpBlocks/CursorTo151.asm
+1868:025   LevelWarpBlocks/CursorTo152.asm
+1869:025   LevelWarpBlocks/CursorTo153.asm
+186A:025   LevelWarpBlocks/CursorTo154.asm
+186B:025   LevelWarpBlocks/CursorTo155.asm
+186C:025   LevelWarpBlocks/CursorTo156.asm
+186D:025   LevelWarpBlocks/CursorTo157.asm
+186E:025   LevelWarpBlocks/CursorTo158.asm
+186F:025   LevelWarpBlocks/CursorTo159.asm
+1870:025   LevelWarpBlocks/CursorTo15A.asm
+1871:025   LevelWarpBlocks/CursorTo15B.asm
+1872:025   LevelWarpBlocks/CursorTo15C.asm
+1873:025   LevelWarpBlocks/CursorTo15D.asm
+1874:025   LevelWarpBlocks/CursorTo15E.asm
+1875:025   LevelWarpBlocks/CursorTo15F.asm
+1876:025   LevelWarpBlocks/CursorTo160.asm
+1877:025   LevelWarpBlocks/CursorTo161.asm
+1878:025   LevelWarpBlocks/CursorTo162.asm
+1879:025   LevelWarpBlocks/CursorTo163.asm
+187A:025   LevelWarpBlocks/CursorTo164.asm
+187B:025   LevelWarpBlocks/CursorTo11A.asm
+187C:025   LevelWarpBlocks/CursorTo11B.asm
+187D:025   LevelWarpBlocks/CursorTo11C.asm
+187E:025   LevelWarpBlocks/CursorTo11D.asm
+187F:025   LevelWarpBlocks/CursorTo11E.asm
+1880:025   LevelWarpBlocks/CursorTo11F.asm
+1881:025   LevelWarpBlocks/CursorTo120.asm
+1882:025   LevelWarpBlocks/CursorTo121.asm
+1883:025   LevelWarpBlocks/CursorTo122.asm
+1884:025   LevelWarpBlocks/CursorTo123.asm
+1885:025   LevelWarpBlocks/CursorTo124.asm
+1886:025   LevelWarpBlocks/CursorTo125.asm
+1887:025   LevelWarpBlocks/CursorTo126.asm
+1888:025   LevelWarpBlocks/CursorTo127.asm
+1889:025   LevelWarpBlocks/CursorTo128.asm
+188A:025   LevelWarpBlocks/CursorTo129.asm
+
+188F:025   WarpToLevelHub.asm
+
+BAA oneuse.asm
+BAB bounce_on.asm
+BAC bounce_off.asm
+
+
+@dsc
+131		0		This tile is currently non-funtional, but is reserved for a tile that's to be used when you apply a new slope assist tile fix, to prevent clipping. This patch is included with the optional patches. You can see an example of what it fixes if you find Solid Slope Assist Tile on SMWCentral Patches section.
+2A5		0		Simple indicator arrows. See tiles 66 and 67 for pink near-the-end-of-level arrows.

@@ -1,0 +1,194 @@
+#amk 2
+
+#spc
+{
+	#author    "Xemogasa"
+	#game      "Spring Tracks VIII"
+	#comment   "Ported by Beruga1990"
+	#title     "sapphire eyes"
+}
+
+#samples
+{
+	#default
+	"default/13 SMW Thunder.brr"
+}
+
+#instruments
+{
+	@23 $FF $E0 $7F $07 $00
+	@4 $FD $E0 $B8 $03 $00
+	@1 $00 $00 $df $03 $00
+	"default/13 SMW Thunder.brr" $FF $E0 $7F $0E $00
+	@0 $8f $00 $df $03 $00
+	@13 $BF $98 $00 $03 $00
+	n1E $8E $F3 $7F $04 $00
+	@14 $FC $E0 $7F $07 $00
+	@6 $00 $00 $59 $03 $00
+	@14 $9E $4C $00 $07 $00
+	@4 $FF $F3 $B8 $03 $00
+	@5 $BF $38 $00 $07 $00
+	n1F $BF $FB $7F $04 $00
+}
+
+"@cHH = @30 v200 o3 y11"
+"@wv1 = @39 v150 o4 y10"
+"@le1 = @32 v210 o4 y10"
+"@cla = @33 v180 o4 y10"
+"@bum = @34 v250 o4 y10"
+"@bas = @31 v0 o2 y10"
+"@wv2 = @35 v100 o5 y10"
+"@cra = @36 v130 o4 y10"
+"@le2 = @38 v210 o4 y12"
+"@le3 = @37 v210 o4 y8"
+"@pia = @40 v100 o4 y10"
+"@bas2 = @31 v170 o1 y10"
+"@kli = @41 v120 o5 y10"
+"@noi = @42 v100 o4 y10"
+
+"BA = $F4$03 @bum c16 $DD$00$18 <<<c^16 $F4$03"
+
+$ef$76$30$D0
+$f1$07$A0$01
+
+w200 t107
+
+#0 l8
+@cHH
+r1^1^1^1^1^1^1^4^ q77 a16 q7B a16 q7F a q73 a q77 a q73 a ; 4
+[[q7F a q73 a q77 a q73 a]]16 ; 5 
+[ [[q77 a q73 a q7F a q73 a]]218]2 ; 6,7,10,7,8,9,11,0,1,2,3,12,13,27,28,9,18,19,14,15,16,17,20,21,22,23,24,25
+
+#1 l16
+@wv1
+(10)[grg+r8.>d+r8.<g+r8. gr8.g+rgr8.>d+r4..<]7 a+ r1.... ; 4-5
+(10)27 (12)[g+ra+r8.>d+r8.<a+r8. gr8.g+rgr8.>d+r4..<] ; 6,7,10,7,8,9,11
+[[(10)2 g+ra+r8.>d+r8.<a+r8. g+r8.a+rg+r8.>d+r4..< (10)]]4 ; 0,1,2,3
+(10)20 ; 12,13,27,28,9
+(10)3 (12) ; 18
+cr8.fr8.gr8.ar8. >cr8.fr8.gr8.ar8.< ; 19
+[[(13)[ara+r8.>fr8.<a+r8. ar8.a+rar8.>fr4..<]2 (14)[a+r>cr8.fr8.cr8.< a+r8.>cr<a+r8.>fr4..<] (13)]]2 ; 14,15
+(13)2 ar>dr8.ar8.<ar8. >dr8.<ar>dr8.ar4..< ara+r8.>gr8.<a+r8. ar8.a+rar8.>gr4..< ; 16
+[[(13)2(14)(13)]]5 ; 17,20,21,22,23
+(13)8 ; 24,25
+
+#2
+@pia
+< (29)[c+16 r4.. c+16 r4^16 c+16 r4^16 c+16 r4.. c+16 r8.] d+16 r4.. d+16 r4^16 c16 r4^16 c16 r4.. c16 r8. (29) d+16 r4.. d+16 r4^16 c16 r4^16 c16 r4.. c16 r8. f16 r4.. f16 r4^16 f16 r4^16 f16 r4.. f16 r8. g+16 r4.. g+16 r4^16 g+16 r4^16 g+16 r4.. g+16 r8. a+16 r4.. a+16 r4^16 a+16 r4^16 a+16 r4.. a+16 r8. > c16 r1.... ; 4,5
+(200)[c16 r4.. c16 r4^16 c16 r4^16 c16 r4.. c16 r8.]4 ; 6
+@le1
+(20)[r2. f16. r32 g32. r16^64 g+8... r64 g8... r64 d+8 r8 d+16 f4^16 ^8 $DD$00$18 <<<a>>> d+8... r64 < g+16.. r8^64 g+4. ^8 $DD$00$18 <<c>> q78 g+4. ^8 $DD$00$18 <<c>> q74 g+4. ^8 $DD$00$18 <<c>> q72 g+4. ^8 $DD$00$18 <<c>> > q7F f16.. r64 g32. r16^64 g+8... r64 g8... r64 c+16 d+8^32^64 r64 < a+2 ^4 $DD$00$30 <f+> q78 a+2 ^4 $DD$00$30 <f+> q74 a+2 ^4 $DD$00$30 <f+> q72 a+2 ^4 $DD$00$30 <f+> >] ; 7
+(21)[q7F f16. r32 g32. r16^64 g+8... r64 g8... r64 d+8 r8 d+16 f4^16 ^8 $DD$00$18 <<<a>>> d+8... r64] < g+16.. r8^64 g+4. ^8 $DD$00$18 <<c>> q78 g+4. ^8 $DD$00$18 <<c>> q7F g+16.. r64 a+32. r16^64 > d+8... r64 < g+16.. r8^64 g+8... r64 > c+4. ^8 $DD$00$18 <<<f>>> c8... r64 < g+16 r8. a+2 ^4 $DD$00$30 <f+> q78 a+2 ^4 $DD$00$30 <f+> q74 a+2 ^4 $DD$00$30 <f+> ; 10
+(20) ; 7
+q7F > (21) g+16.. r8^64 g+4. ^8 $DD$00$18 <<c>> q78 g+4. ^8 $DD$00$18 <<c>> q7F g+16.. r64 a+32. r16^64 > c8... r64 c+16.. r8^64 c8... r64 < a+4. ^8 $DD$00$18 <<d>> g+8... r64 d+16 r8. g+16 a+4.. ^4 $DD$00$30 <f+> q78 g+16 a+4.. ^4 $DD$00$30 <f+> q74 g+16 a+4.. ^4 $DD$00$30 <f+> ; 8
+(23)[@le2 q7F g+4 ^8 $DD$00$18 <<c>> r8 > d+8... r64 < g+4. ^8 $DD$00$18 <<c>> q78 g+4. ^8 $DD$00$18 <<c>> @le3 q7F r32 < g+16. > d+16.. r64 g8^16^64 r32. g+16^64 r8^32^64 g8^16^64 r32. d+4. ^8 $DD$00$18 <<<g>>> q78 d+4. ^8 $DD$00$18 <<<g>>> q74 d+4 @le2 q7F g+4 ^8 $DD$00$18 <<c>> r8 > c+16 d+8. c4. ^8 $DD$00$18 <<<e>>> < g+16.. r64 a+32. r16^64 > c8... r64 < a+2 ^4 $DD$00$30 <f+> q78 a+2 ^4 $DD$00$30 <f+> q74 a+2 ^4 $DD$00$30 <f+>] ; 9
+(24)[q7F g+4 ^8 $DD$00$18 <<c>> r8 > c+16 d+8^32^64 r64 d+4. ^8 $DD$00$18 <<<g>>> < g+8^32^64 r4^16^64 @le3 q7F r32 < g+16. > d+16.. r64 g8^16^64 r32. g+16^64 r8^32^64 g8^16^64 r32. g+4. ^8 $DD$00$18 <<c>> q78 g+4. ^8 $DD$00$18 <<c>> @le2 q7F g+16. r32 a+16. r32 > c+4 ^8 $DD$00$18 <<<f>>> r8 < a+16 > c8. c+4. ^8 $DD$00$18 <<<f>>> d+8^32^64 r4^16^64 < a+2 ^4 $DD$00$30 <f+> q78 a+2 ^4 $DD$00$30 <f+>] q74 a+2 ^4 $DD$00$30 <f+> ; 11
+(22)[@le1 q7F a+16 > c8. ^8 $DD$00$18 <<<e>>> r8 c8.. r4^32 q76 c8.. r32 q7F d+8^32 r4^16^32 < g+4^16^32 r8^32 g+16. r8^32 g16. r8^32 g+4. ^8 $DD$00$18 <<c>> q78 g+4. ^8 $DD$00$18 <<c>> q7F d+16. r32 f32. r16^64 a+16 > c8. ^8 $DD$00$18 <<<e>>> r8 c8.. r4^32 q76 c8.. r32] q7F d+8^32 r4^16^32 < a+4^16^32 r8^32 g+8.. r4^32 a+4. ^8 $DD$00$18 <<d>> q78 a+4. ^8 $DD$00$18 <<d>> q7F d+16 f8^32 r32 ; 0
+g+4 ^8 $DD$00$18 <<c>> r8 g+8.. r4^32 g+8... r64 a+16.. r8^64 a+16 > c8. < a+4. ^8 $DD$00$18 <<d>> g+8 r8 d+16 f8. g+4. ^8 $DD$00$18 <<c>> q78 g+4. ^8 $DD$00$18 <<c>> q7F f16^64 r32. g16. r32 g+8.. r32 g16. r8^32 g+8.. r32 > d+4. ^8 $DD$00$18 <<<g>>> < d+8 r8 g+8. r16 a+2 ^4 $DD$00$30 <f+> q78 a+2 ^4 $DD$00$30 <f+> q74 a+2 ^4 $DD$00$30 <f+> ; 1
+> (22) q7F d+4 ^8 $DD$00$18 <<<g>>> r8 d+4. ^8 $DD$00$18 <<<g>>> g+8.. r32 f16 g8. d+4. ^8 $DD$00$18 <<<g>>> q78 d+4. ^8 $DD$00$18 <<<g>>> < q7F a+32. r16^64 > c16.. r64 ; 2
+c+8^32^64 r16^64 c+8.. r32 c+8 r8 c+4. ^8 $DD$00$18 <<<f>>> c4 c+8 r8 < a+16 > c4^16 ^8 $DD$00$18 <<<e>>> < g+4. q78 a+16 g+16 q7F d+4. ^8 $DD$00$18 <<<g>>> q78 d+4. ^8 $DD$00$18 <<<g>>> q7F a+16.. r64 > c32 r16. c+8... r64 c8... r64 c+8 r8 < g+16 a+4.. ^4 $DD$00$30 <f+> g+8... r64 a+2 ^4 $DD$00$30 <f+> q78 a+2 ^4 $DD$00$30 <f+> q74 a+2 ^4 $DD$00$30 <f+> ; 3
+q72 a+2 ^4 $DD$00$30 <f+> q71 a+2 ^4 $DD$00$30 <f+> r2 q7F @pia (200) (201)[c+16 r4.. c+16 r4^16 c+16 r4^16 c+16 r4.. c+16 r8. < a+16 r4.. a+16 > r4^16 c16 r4^16 c16 r4.. c16 r8.] (200)2 (201)  ; 12,13
+r2. @le1 f16. r32 g32. r16^64 g+8... r64 g8... r64 d+8... r64 c8 r8 d+16 f8^32^64 r64 d+8... r64 < g+16.. r8^64 a+32. r16^64 g+2 ^8 $DD$00$18 <<c>> q78 g+4. ^8 $DD$00$18 <<c>> q74 g+4. ^8 $DD$00$18 <<c>> q72 g+8 ^8 $DD$00$18 <<c>> > q7F f16.. r64 g32. r16^64 g+8... r64 g8... r64 d+8... r64 < a+2 ^4 $DD$00$30 <f+> q78 a+2 ^4 $DD$00$30 <f+> q74 a+2 ^4 $DD$00$30 <f+> ; 27
+q72 a+2 ^4 $DD$00$30 <f+> > q7F f16. r32 g32. r16^64 g+8... r64 g8... r64 d+8... r64 f8... r64 a+16 > c8^32^64 r64 d+8... r64 d+16.. r8^64 < g+4. ^8 $DD$00$18 <<c>> q78 g+4. ^8 $DD$00$18 <<c>> q7F g+16.. r64 a+32. r16^64 > c8... r64 c+16.. r8^64 c8... r64 c+4. ^8 $DD$00$18 <<<f>>> c8... r64 < g+16 r8. g+16 a+4.. ^4 $DD$00$30 <f+> q78 g+16 a+4.. ^4 $DD$00$30 <f+> q74 g+16 a+4.. ^4 $DD$00$30 <f+> ; 28
+(23) ; 9
+(24) q74 a+2 q7F g+16 r16 a+16.. r64 ; 18
+> c2 ^4 $DD$00$30 <<g+>> q78 c2 ^4 $DD$00$30 <<g+>> < @le1 q7F f16.. r64 g32. r16^64 a+16.. r64 > c16.. r64 ; 19
+c16 d4^16 ^8 $DD$00$18 <<<f+>>> d8.. r4^32 q76 d8.. r32 q7F c8.. r4^32 < a+4... r32 a4 f64 r8... a+4. ^8 $DD$00$18 <<d>> q78 a+4. ^8 $DD$00$18 <<d>> q7F f16 r16 a+16 r16 > c8... r64 < a+8... r64 f8 r8 > c4.... r64 < a+16.. r8^64 > c16 d8. c2 ^4 $DD$00$30 <<g+>> q78 c2 ^4 $DD$00$30 <<g+>> q74 c2 ^4 $DD$00$30 <<g+>> ; 14
+q7F c16 d4^16 ^8 $DD$00$18 <<<f+>>> d8.. r4^32 d8.. r32 d+8.. r32 f16. r8^32 f4... r32 < a+4 a32. r8^16^64 a+4. ^8 $DD$00$18 <<d>> q78 a+4. ^8 $DD$00$18 <<d>> q7F a+16 r16 > f16 r16 a+8... r64 a8... r64 f8 r8 < a+4.... r64 > f16.. r8^64 c16 d8. c2 ^4 $DD$00$30 <<g+>> q78 c2 ^4 $DD$00$30 <<g+>> q74 c2 ^4 $DD$00$30 <<g+>> ; 15
+q7F d+16 f4^16 ^8 $DD$00$18 <<<a>>> f4 r4 f8... r64 d+8... r64 d16.. r8^64 c4. ^8 $DD$00$18 <<<e>>> < a+4 r4 > c4. ^8 $DD$00$18 <<<e>>> q78 c4. ^8 $DD$00$18 <<<e>>> < q7F a+8 > c16. r32 c16 d4^16 ^8 $DD$00$18 <<<f+>>> f16 r8. f4. ^8 $DD$00$18 <<<a>>> c16 d4^16 q78 d+16 d16 < q7F a+4. ^8 $DD$00$18 <<d>> a4 r4 a+4. ^8 $DD$00$18 <<d>> q78 a+4 q7F f8 a+16 r16 > c32. r16^64 d16.. r64 ; 16
+d+4 ^8 $DD$00$18 <<<g>>> r8 d16. r8^32 d4.... r64 c4 r4 c4. q78 d16 c16 < q7F a+4 a32. r8^16^64 a+4. ^8 $DD$00$18 <<d>> q78 a+4. ^8 $DD$00$18 <<d>> q7F f32. r16^64 a+32. r16^64 > d+4. ^8 $DD$00$18 <<<g>>> d4 r4 d4 g4 r4 f2 ^4 $DD$00$30 <c+> q78 f2 ^4 $DD$00$30 <c+> q74 f2 ^4 $DD$00$30 <c+> ; 17
+q7F c16 d8. ^8 $DD$00$18 <<<f+>>> r8 d8.. r4^32 q76 d8.. r32 q7F f8^32 r4^16^32 < a+4^16^32 r8^32 a+16. r8^32 a16. r8^32 a+4. ^8 $DD$00$18 <<d>> q78 a+4. ^8 $DD$00$18 <<d>> q7F f16. r32 g32. r16^64 > c16 d8. ^8 $DD$00$18 <<<f+>>> r8 d8.. r4^32 q76 d8.. r32 q7F f8^32 r4^16^32 c4^16^32 r8^32 < a+8.. r4^32 > c4. ^8 $DD$00$18 <<<e>>> q78 c4. ^8 $DD$00$18 <<<e>>> < q7F f16 g8^32 r32 ; 20
+a+4 ^8 $DD$00$18 <<d>> r8 a+8.. r4^32 a+8... r64 > c16.. r8^64 c16 d8. c4. ^8 $DD$00$18 <<<e>>> < a+8 r8 f16 g8. a+4. ^8 $DD$00$18 <<d>> q78 a+4. ^8 $DD$00$18 <<d>> q7F g16^64 r32. a16. r32 a+8.. r32 a16. r8^32 a+8.. r32 > f4. ^8 $DD$00$18 <<<a>>> < f8 r8 a+8. r16 > c2 ^4 $DD$00$30 <<g+>> q78 c2 ^4 $DD$00$30 <<g+>> q74 c2 ^4 $DD$00$30 <<g+>> ; 21
+q7F c16 d8. ^8 $DD$00$18 <<<f+>>> r8 d8.. r4^32 q76 d8.. r32 q7F f8^32 r4^16^32 < a+4^16^32 r8^32 a+16. r8^32 a16. r8^32 a+4. ^8 $DD$00$18 <<d>> q78 a+4. ^8 $DD$00$18 <<d>> q7F f16. r32 g32. r16^64 > c16 d8. ^8 $DD$00$18 <<<f+>>> r8 d8.. r4^32 q76 d8.. r32 q7F f4 ^8 $DD$00$18 <<<a>>> r8 f4. ^8 $DD$00$18 <<<a>>> a+8.. r32 g16 a8. f4. ^8 $DD$00$18 <<<a>>> q78 f4. ^8 $DD$00$18 <<<a>>> q7F c32. r16^64 d16.. r64 ; 22 
+d+8^32^64 r16^64 d+8.. r32 d+8 r8 d+4. ^8 $DD$00$18 <<<g>>> d4 d+8 r8 c16 d4^16 ^8 $DD$00$18 <<<f+>>> < a+4. > q78 c16 < a+16 q7F f4. ^8 $DD$00$18 <<<a>>> q78 f4. ^8 $DD$00$18 <<<a>>> > q7F c16.. r64 d32 r16. d+8... r64 d8... r64 d+8 r8 < a+16 > c4.. ^4 $DD$00$30 <<g+>> < a+8... r64 > c2 ^4 $DD$00$30 <<g+>> q78 c2 ^4 $DD$00$30 <<g+>> q74 c2 ^4 $DD$00$30 <<g+>> ; 23
+q72 c2 ^4 $DD$00$30 <<g+>> q71 c2 ^4 $DD$00$30 <<g+>> q7F 
+r4 w197 r4 w194 r4 w191 r4 w188 r4 w185 r4 w182 r4 w179 r4 w176 r4 w173 r4 w170 r4 w167 r4 w164 r4 w161 r4 w158 r4 w155 r4 w152 r4 w149 r4 w146 r4 w143 r4 w140 r4 w137 r4 w134 r4 w131 r4 w128 r4 w125 r4 w122 r4 w119 r4 w116 r4 w113 r4 w110 ; 24
+r4 w107 r4 w104 r4 w101 r4 w88 r4 w85 r4 w82 r4 w79 r4 w76 r4 w73 r4 w70 r4 w67 r4 w64 r4 w61 r4 w58 r1^1^1^1. ; 25
+
+#6 l16
+@pia
+[[(30)[g+ r4.. g+ r4^ g+ r4^ g+ r4.. g+ r8.] (31)[g+ r4.. g+ r4^ g r4^ g r4.. g r8.] ]]3 (30) a+ r1.... ; 4,5
+(30)4 [[(30)3 (31)]]5 (30)2 (32)[g+ r4.. g+ r4^ a+ r4^ a+ r4.. a+ r8.] (33)[a+ r4.. a+ r4^ a+ r4^ a+ r4.. a+ r8.] ; 6,7,10,7,8,9,11
+[[(30)3 (31)]]9 (30)2 (32)(33) ; 0,1,2,3,12,13,27,28,9,18
+> c r4.. c r4^ c r4^ c r4.. c r8. < ; 19
+(33)7 (34)[a+ r4.. a+ r4^ a r4^ a r4.. a r8.] ; 14,15
+(33) (35)[a r4.. a r4^ a r4^ a r4.. a r8.]2 (33) ; 16
+[[(33)3 (34)]]4 ; 17,20,21,22
+(33)3 (35) [[(33)3 (34)]]2; 23,24,25
+
+#4 l8
+[[r1]]7 @bas $E8 $80 $AA d+1 ; 4
+< f4 r4 f4. f r > f32 < r16. f4 r4 g4 g+4 r4 g+4 r > g+4 < r g+4. g4^16^32 r32 a+4 r4 a+8.. r32 > a+16 < r16 a+8.. r32 g+16. r32 a+4 r4 a+ r > c1 < r1 ; 5
+(40)[BA @bas2 q78 f q7F f f]16 ; 6
+(40)4 (41)[BA @bas2 q78 > c+ q7F c+ c+ <]4 (40)4 (42)[BA @bas2 q78 > d+ q7F d+ d+ <]4 ; 7
+(40)4 (41)4 (43)[BA @bas2 q78 g+ q7F g+ g+]4 (48)[BA @bas2 q78 g q7F g g]4 ; 10
+(40)4 (41)4 (40)4 (42)4 ; 7
+(40)4 (41)4 (43)4 (42)4 ; 8
+(44)[BA @bas2 q78 > c q7F c c < BA @bas2 q78 > c q7F c c+ <] (41)6 (44) (41)2 (42)4 ; 9
+(44) (41)6 (45)[BA @bas2 q78 a+ q7F a+ a+] BA @bas2 q78 a+ q7F a+ > c+ < (41)2 (42)4 ; 11
+[[(40)4 (41)4 (43)4 (42)4]]2 ; 0,1
+(40)4 (41)4 (43)4 (47)[BA @bas2 q78 > c q7F c c <]4 ; 2
+(41)4 (43)4 (45)4 BA @bas2 q78 > c q7F c c < BA @bas2 q78 > c q7F c d+ < BA @bas2 q78 > d+ < q7F d+ d+ (46)[BA @bas2 q78 d+ q7F d+ d+] ; 3
+(40)8 (45)4 (46)4 ; 12
+(40)8 (45)4 (47)4 ; 13
+(40)4 (41)4 (40)4 (42)4 ; 27
+(40)4 (41)4 (43)4 (42)4 ; 28
+(44) (41)6 (44) (41)2 (42)4 ; 9
+(44) (41)6 BA @bas2 q78 a+ q7F a+ a+ BA @bas2 q78 a+ q7F a+ > c+ < (41)2 (42)4 ; 18
+r1 q75 BA r q7A BA r q7C BA BA BA BA q7F ; 19
+(48)4 (42)4 (45)4 [[BA @bas2 q78 a q7F a a]]4 ; 14
+(48)4 (42)4 (45)4 (49)[BA @bas2 q78 > d q7F d d <]4 ; 15
+(42)4 (40)4 [[BA @bas2 q78 f+ q7F f+ f+]]4 (49)4 ; 16
+(47)4 (49)4 (42)4 (40)4 ; 17
+[[(48)4 (42)4 (45)4 (40)4]]2 ; 20,21
+(48)4 (42)4 (45)4 (49)4 ; 22
+(42)4 (45)4 (47)4 BA @bas2 q78 > d q7F d d< BA @bas2 q78 > d q7F d f < BA @bas2 q78 > f < q7F f f BA @bas2 q78 f q7F f f ; 23
+(48)8 (47)4 (40)4 ; 24
+(48)8 (47)4 (49)4 ; 25
+
+#5 l16
+@pia
+(50)[d+ r4.. d+ r4^ d+ r4^ d+ r4.. d+ r8.]7 d+ r1.... ; 4,5
+(50)26 (51)[d+ r4.. d+ r4^ f r4^ f r4.. f r8. g+ r4.. g+ r4^ g r4^ g r4.. g r8.] ; 6,7,10,7,8,9,11
+[[ (59)[@kli g+ r8. d+ r g+ r @pia d+ r @kli d+ r8. g+ r4^ d+ r8. g+ r8. d+ r8.] (58)[a+ r8. d+ r a+ r @pia d+ r @kli d+ r8. g] r4^ d+ r8. g r8. d+ r8.]]6 ; 0,1,2
+(59) a+ r8. d+ r a+ r @pia d+ r @kli d+ r8. > c < r4^ d+ r8. > c < r8. d+ r8. (59) (58) r4^ @pia d+ r4.. d+ r8. ; 3
+(50)22 (51) ; 12,13,27,28,9,18
+a+ r4.. a+ r4^ a r4^ a r4.. a r8. ; 19
+(52)[f r4.. f r4^ f r4^ f r4.. f r8.]8 ; 14,15
+(53)[g r4.. g r4^ g r4^ g r4.. g r8.] (52) f+ r4.. f+ r4^ f+ r4^ f+ r4.. f+ r8. (53) ; 16
+(52)4 ; 17
+[[ (57)[@kli a+ r8. f r a+ r @pia f r @kli f r8. a+ r4^ f r8. a+ r8. f r8. > c < r8. f r > c < r @pia f r @kli f r8.] a r4^ f r8. a r8. f r8.]]6 ; 20,21,22
+(57) > d < r4^ f r8. > d < r8. f r8. (57) a r4^ @pia f r4.. f r8. ; 23
+(52)8 ; 24,25
+
+#3 l8
+$F4$03 @pia
+< [[(69)[g+16 r4.. g+16 r4^16 g+16 r4^16 g+16 r4.. g+16 r8.] (68)[g+16 r4.. g+16 r4^16 a+16 r4^16 a+16 r4.. a+16 r8.] ]]3 (69) g16 r1^4.. $F4$03 @cla d+ d+ d+ d+ ; 4,5
+@cra c4.. (63)[r32 @cla d+.. r2. r32 @cla d+.. r2.] r32 @cla d+.. r2^16 @noi c8. (63) r32 @cla d+.. r2. r32 @cla d+.. r4^16 @cra q76 c2 @cra q78 c2 ; 6 
+(60)[q7F c4.. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8. [[r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8.]]3 r16 @cra q78 c2] ; 7,10
+(61)[q7F c4.. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8. [[r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8.]]2 r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r4^16 @cra q76 c2 @cra q78 c2] ; 7,8
+(62)[q7F c4.. [[r32 @cla d+.. r2.]]13 r32 @cla d+.. r4^16 @cra q73 c2 q74 c2 q76 c2 q78 c2] ; 9,11
+(60) ; 0,1
+(61)3 ; 2,3,12,13,27,28
+q7F c4.. [[r32 @cla d+.. r2.]]15 r32 @cla d+.. r4^16 ; 9,18
+@cra q77 c2 q78 c2 q7A c4.. q7F r32 @cla d+^32 d+ d+ d+ ; 19
+@cra q7F c4.. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8. [[r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8.]]2 r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r4^16 @cra q73 c2 q74 c2 q76 c2 q78 c2 ; 14,15
+q7F c4.. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8. [[r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8.]]2 r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r4^16 @cra q77 c2 q78 c2 q7A c2 q7C c2 ; 16,17
+(60) ; 20,21
+q7F c4.. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8. [[r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8.]]2 r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r4^16 @cra q78 c2 q7A c2 ; 22,23
+q7F c4.. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8. [[r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2. r32 @cla d+.. r2^16 @noi c8.]]3 r32 d+.. r4. ; 24,25
+
+#7 l16
+[[r1]]8 ; 4
+@wv2
+(70)[y10 q7F g+ r y11 g y10 q76 g+ y12 q7F d+ y9 q76 g y13 q7F <g+> y8 q76 d+ y14 q7F <g y7 q76 g+ y15 q7F g+ y6 q76 g> y16 q7F d+ y5 q76 <g+ y17 q7F g+> y4 q76 d+ y18 q7F g+ y3 q76 <g+> y17 q7F g y2 q76 g+ y16 q7F d+ y3 q76 g y15 q7F <g+> y4 q76 d+ y14 q7F <g y5 q76 g+ y13 q7F g+ y6 q76 g> y12 q7F d+ y7 q76 <g+ y11 q7F g+> y8 q76 d+ y10 q7F g+ y9 q76 <g+> y9 q7F g y10 q76 g+ y8 q7F d+ y11 q76 g y7 q7F <g+> y12 q76 d+ y6 q7F <g y13 q76 g+ y5 q7F g+ y14 q76 g> y4 q7F d+ y15 q76 <g+ y3 q7F g+> y16 q76 d+ y2 q7F g+ y17 q76 <g+> y3 q7F g y18 q76 g+ y4 q7F d+ y17 q76 g y5 q7F <g+> y16 q76 d+ y6 q7F <g y15 q76 g+ y7 q7F g+ y14 q76 g> y8 q7F d+ y13 q76 <g+ y9 q7F g+> y12 q76 d+
+y10 q7F g+ y11 q76 <g+> q7F g y10 q76 g+ y12 q7F d+ y9 q76 g y13 q7F <g+> y8 q76 d+ y14 q7F <g y7 q76 g+ y15 q7F g+ y6 q76 g> y16 q7F d+ y5 q76 <g+ y17 q7F g+> y4 q76 d+ y18 q7F g+ y3 q76 <g+> y17 q7F g y2 q76 g+ y16 q7F d+ y3 q76 g y15 q7F <g+> y4 q76 d+ y14 q7F <g y5 q76 g+ y13 q7F g+ y6 q76 g> y12 q7F d+ y7 q76 <g+ y11 q7F g+> y8 q76 d+ y13 <g+ y9 g+> y12 d+ y7 q72 <g+ y11 q76 g+> y8 q72 d+ y13 q73 <g+ y9 q72 g+> y12 q73 d+ y7 q71 <g+ y11 q73 g+> y8 q71 d+ y13 q72 <g+ y9 q71 g+> y12 q72 d+ y7 q71 <g+ y11 q72 g+> y8 q71 d+ y13 <g+ y9 g+> y12 d+ y7 <g+ y11 g+> y8 d+ y13 <g+ y9 g+> y12 d+ y7 <g+ y11 g+> y8 d+ r y9 <g+>] ; 5
+
+[[y10 q7F g+ r y11 g y10 q76 g+ y12 q7F d+ y9 q76 g y13 q7F <g+> y8 q76 d+ y14 q7F <g y7 q76 g+ y15 q7F g+ y6 q76 g> y16 q7F d+ y5 q76 <g+ y17 q7F g+> y4 q76 d+ y18 q7F g+ y3 q76 <g+> y17 q7F g y2 q76 g+ y16 q7F d+ y3 q76 g y15 q7F <g+> y4 q76 d+ y14 q7F <g y5 q76 g+ y13 q7F g+ y6 q76 g> y12 q7F d+ y7 q76 <g+ y11 q7F g+> y8 q76 d+ y10 q7F g+ y9 q76 <g+> y9 q7F g y10 q76 g+ y8 q7F d+ y11 q76 g y7 q7F <g+> y12 q76 d+ y6 q7F <g y13 q76 g+ y5 q7F g+ y14 q76 g> y4 q7F d+ y15 q76 <g+ y3 q7F g+> y16 q76 d+ y2 q7F g+ y17 q76 <g+> y3 q7F g y18 q76 g+ y4 q7F d+ y17 q76 g y5 q7F <g+> y16 q76 d+ y6 q7F <g y15 q76 g+ y7 q7F g+ y14 q76 g> y8 q7F d+ y13 q76 <g+ y9 q7F g+> y12 q76 d+
+y10 q7F g+ y11 q76 <g+> q7F g y10 q76 g+ y12 q7F d+ y9 q76 g y13 q7F <g+> y8 q76 d+ y14 q7F <g y7 q76 g+ y15 q7F g+ y6 q76 g> y16 q7F d+ y5 q76 <g+ y17 q7F g+> y4 q76 d+ y18 q7F g+ y3 q76 <g+> y17 q7F g y2 q76 g+ y16 q7F d+ y3 q76 g y15 q7F <g+> y4 q76 d+ y14 q7F <g y5 q76 g+ y13 q7F g+ y6 q76 g> y12 q7F d+ y7 q76 <g+ y11 q7F g+> y8 q76 d+ y10 q7F g+ y9 q76 <g+> y9 q7F g y10 q76 g+ y8 q7F d+ y11 q76 g y7 q7F <g+> y12 q76 d+ y6 q7F <g y13 q76 g+ y5 q7F g+ y14 q76 g> y4 q7F d+ y15 q76 <g+ y3 q7F g+> y16 q76 d+ y2 q7F g+ y17 q76 <g+> y3 q7F g y18 q76 g+ y4 q7F d+ y17 q76 g y5 q7F <g+> y16 q76 d+ y6 q7F <g y15 q76 g+ y7 q7F g+ y14 q76 g> y8 q7F d+ y13 q76 <g+ y9 q7F g+> y12 q76 d+]]16 ; 6-28,9
+
+(70) ; 18
+r1^1 ; 19
+
+[[y10 q7F a+ r y11 a y10 q76 a+ y12 q7F f y9 q76 a y13 q7F <a+> y8 q76 f y14 q7F <a y7 q76 a+ y15 q7F a+ y6 q76 a> y16 q7F f y5 q76 <a+ y17 q7F a+> y4 q76 f y18 q7F a+ y3 q76 <a+> y17 q7F a y2 q76 a+ y16 q7F f y3 q76 a y15 q7F <a+> y4 q76 f y14 q7F <a y5 q76 a+ y13 q7F a+ y6 q76 a> y12 q7F f y7 q76 <a+ y11 q7F a+> y8 q76 f y10 q7F a+ y9 q76 <a+> y9 q7F a y10 q76 a+ y8 q7F f y11 q76 a y7 q7F <a+> y12 q76 f y6 q7F <a y13 q76 a+ y5 q7F a+ y14 q76 a> y4 q7F f y15 q76 <a+ y3 q7F a+> y16 q76 f y2 q7F a+ y17 q76 <a+> y3 q7F a y18 q76 a+ y4 q7F f y17 q76 a y5 q7F <a+> y16 q76 f y6 q7F <a y15 q76 a+ y7 q7F a+ y14 q76 a> y8 q7F f y13 q76 <a+ y9 q7F a+> y12 q76 f
+y10 q7F a+ y11 q76 <a+> q7F a y10 q76 a+ y12 q7F f y9 q76 a y13 q7F <a+> y8 q76 f y14 q7F <a y7 q76 a+ y15 q7F a+ y6 q76 a> y16 q7F f y5 q76 <a+ y17 q7F a+> y4 q76 f y18 q7F a+ y3 q76 <a+> y17 q7F a y2 q76 a+ y16 q7F f y3 q76 a y15 q7F <a+> y4 q76 f y14 q7F <a y5 q76 a+ y13 q7F a+ y6 q76 a> y12 q7F f y7 q76 <a+ y11 q7F a+> y8 q76 f y10 q7F a+ y9 q76 <a+> y9 q7F a y10 q76 a+ y8 q7F f y11 q76 a y7 q7F <a+> y12 q76 f y6 q7F <a y13 q76 a+ y5 q7F a+ y14 q76 a> y4 q7F f y15 q76 <a+ y3 q7F a+> y16 q76 f y2 q7F a+ y17 q76 <a+> y3 q7F a y18 q76 a+ y4 q7F f y17 q76 a y5 q7F <a+> y16 q76 f y6 q7F <a y15 q76 a+ y7 q7F a+ y14 q76 a> y8 q7F f y13 q76 <a+ y9 q7F a+> y12 q76 f]]10 ; 14-25

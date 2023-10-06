@@ -1,0 +1,317 @@
+; !! NOT A440 tuning !!
+
+#spc
+{
+    #author     "MF DOOM"
+    #game       "Operation: Doomsday"
+    #comment    "Mic check."
+    #title      "Doomsday"
+}
+
+#samples
+{
+    ; native
+    "optimized/00 SMW @0.brr"
+    "optimized/01 SMW @1.brr"
+    "optimized/02 SMW @2.brr"
+    "optimized/03 SMW @3.brr"
+    "optimized/04 SMW @4.brr"
+    "default/05 SMW @8.brr"
+    "optimized/06 SMW @22.brr"
+    "optimized/07 SMW @5.brr"
+    "optimized/08 SMW @6.brr"
+    "optimized/09 SMW @7.brr"
+    "optimized/0A SMW @9.brr"
+    "optimized/0B SMW @10.brr"
+    "default/0C SMW @13.brr"
+    "optimized/0D SMW @14.brr"
+    "optimized/0E SMW @29.brr"
+    "optimized/0F SMW @21.brr"
+    "optimized/10 SMW @12.brr"
+    "optimized/11 SMW @17.brr"
+    "optimized/12 SMW @15.brr"
+    "optimized/13 SMW Thunder.brr"
+    ; custom
+    "MF DOOM - Doomsday/chord1.brr"
+    "MF DOOM - Doomsday/chord2.brr"
+    "MF DOOM - Doomsday/chord3.brr"
+    "MF DOOM - Doomsday/dl1.brr"
+    "MF DOOM - Doomsday/dl2.brr"
+    "MF DOOM - Doomsday/scratch.brr"
+}
+
+#instruments
+{
+    "MF DOOM - Doomsday/chord1.brr"     $FF $EB $7F $02 $DF ; @30 EP 1
+    "MF DOOM - Doomsday/chord2.brr"     $FF $EB $7F $02 $DF ; @31 EP 2
+    "MF DOOM - Doomsday/chord3.brr"     $FF $EB $7F $02 $DF ; @32 EP 2
+    "MF DOOM - Doomsday/dl1.brr"        $FE $E0 $7F $02 $E8 ; @33 Drum loop 1
+    "MF DOOM - Doomsday/dl2.brr"        $FE $E0 $7F $02 $E8 ; @34 Drum loop 2
+    @22                                 $8E $E0 $7F $07 $00 ; @35 Close hi-hat
+    @12                                 $BF $00 $7F $07 $00 ; @36 Hand drum
+    @0                                  $CE $30 $7F $03 $00 ; @37 Open hi-hat
+    @8                                  $8E $E8 $7F $07 $65 ; @38 Bass
+    @21                                 $8F $E0 $7F $04 $00 ; @39 Kick
+    @10                                 $8F $E0 $7F $04 $00 ; @40 Snare
+    "MF DOOM - Doomsday/scratch.brr"    $8F $E0 $7F $02 $E8 ; @41 Scratch
+    @13                                 $8E $EC $7F $02 $F4 ; @42 Vox
+}
+
+; Instrument macros
+"EP1=@30"
+"EP2=@31"
+"EP3=@32"
+"DL1=@33"
+"DL2=@34"
+"CHH=@35"
+"HD=@36"
+"OHH=@37 n1f"
+"BAS=@38"
+"KIK=@39"
+"SNR=@40"
+"SCR=@41"
+"VOX=@42"
+"EKT=$f4 $01"
+"PF=$dc"
+
+; Effect macros
+"EKT=$f4 $03"
+
+; -- Channel 1 --
+
+#0
+
+t39 w240
+
+$ef $03 $0c $0c
+$f1 $02 $18 $01
+
+r2
+[r1]4 /
+
+; Intro
+VOX o4 v120 p6,12,10
+
+$fa $02 $ff
+$ee $f0
+
+
+EKT
+f+8 g+8. e8. f+8. c+8. < b2. r4. b8 >
+b2^8 a8 g+8 a16 b8. g+8. f+2^16 g+8
+f+4. e4 f+4 e16 f+16 e2^8 c+8 c+8 c+8
+d8. c+8. < b2. r2.
+
+$fa $02 $00
+$ee $00
+
+; Verse 1
+v250 o4 p0,0,0
+
+EKT
+[DL1 c4 @34 c8. DL1 q7a c16 q7f c4 DL2 c4]12
+[DL1 q7f c4 DL2 c8. q7a c16 DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. DL2 q7a c16]4
+
+; Verse 2
+q7f [DL1 c4 @34 c8. DL1 q7a c16 q7f c4 DL2 c4]7
+DL1 c4 @34 c8. DL1 q7a c16 q7f c8. DL2 c8. c8
+[DL1 c4 @34 c8. DL1 q7a c16 q7f c4 DL2 c4]4
+[DL1 q7f c4 DL2 c8. q7a c16 DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. DL2 q7a c16]4 EKT
+
+; Bridge
+v200 y15
+q7f [DL1 c4 @34 c8. DL1 q7a c16 q7f c4 DL2 c4]3
+DL1 c4 @34 c8. DL1 q7a c16 q7f c4 r4
+[DL1 c4 @34 c8. DL1 q7a c16 q7f c4 DL2 c4]4
+[DL1 q7f c4 DL2 c8. q7a c16 DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. DL2 q7a c16]4
+[DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. q7a c16 DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. DL2 q7a c16]4
+
+; Coda
+v250 y10
+EKT
+q7f [DL1 c4 @34 c8. DL1 q7a c16 q7f c4 DL2 c4]4
+[DL1 q7f c4 DL2 c8. q7a c16 DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. DL2 q7a c16]4
+
+; -- Channel 2 --
+
+#1
+
+v170 y10 o4
+
+EP1 r8 c8 c4
+
+EP1 c2.. < g1^8
+EP2 > c2.. EP3 c2.. r4 /
+
+; Intro
+[EP1 c2.. < g1^8
+EP2 > c2.. EP3 c1^8]2
+
+; Verse 1
+[EP1 c2.. < g1^8
+EP2 > c2.. EP3 c1^8]4
+
+; Verse 2
+EP1 c2.. < g1^8
+EP2 > c2.. EP3 c1^8
+EP1 c2.. < g1^8
+EP2 > c2.. EP3 c2 c8 r16 c8 r16 c8 r8
+[EP1 c2.. < g1^8
+EP2 > c2.. EP3 c1^8]2
+
+; Bridge
+EP1 < g4 r2. [r1]3
+
+SCR o4 v155 y15 l8
+PF $c0 $0a c c c c c c c < g >
+PF $c0 $05 c c c c c c16 < c c.
+PF $c0 $0a > c c c < < g > > c c < g > g16 g16
+PF $c0 $0f c c < g > c c < c4 < g
+
+PF $c0 $0a > > c c c c c c c < g
+PF $c0 $05 > c c < g. g16 c16 c16 > c16 < c c8.
+PF $c0 $0a > c c c < g16 g16 > c c < g > g16 g16
+PF $c0 $0f c16 < c8 > c16 < g8 > c16 < c8. > c < g < g
+
+l16
+PF $c0 $0a > > c c < g g > c8 < g > c8 < g8 g c8 > c8
+PF $c0 $05 c8 c8 c8 < g g8. c8 > c c c8
+PF $c0 $0a c8 c8 < g8 > c8 c8 < g8 > c8 c8
+PF $c0 $0f < g8 > c c c8 c8 c8 c8 < g8 > c8
+
+; Coda
+v170 y10
+
+[EP1 c2.. < g1^8
+EP2 > c2.. EP3 c1^8]4
+
+; -- Channel 3 --
+
+#2
+
+VOX o4 v230 p6,12,10 y10
+
+r2
+[r1]3 r2.. f+8 /
+
+; Intro
+g+8. e8. f+8. c+8. < b2. r4. b8 >
+b2^8 a8 g+8 a16 b8. g+8. f+2^16 g+8
+f+4. e4 f+4 e16 f+16 e2^8 c+8 c+8 c+8
+d8. c+8. < b8^2. r2.
+
+; Verse 1
+[r1]8
+
+SCR o4 v140 p0,0,0 y15 l8
+
+[PF $c0 $0a c c c c c c c < g >
+PF $c0 $05 c c c c c c c < c >
+PF $c0 $0a c c c c c c c < g >
+PF $c0 $0f c c c c c c c < c >]2
+
+; Verse 2
+[r1]8
+
+[PF $c0 $0a c c c c c c c < g >
+PF $c0 $05 c c c c c c c < c >
+PF $c0 $0a c c c c c c c < g >
+PF $c0 $0f c c c c c c c < c >]2
+
+; Bridge
+v200 y5
+
+r128 q7f [DL1 c4 @34 c8. DL1 q7a c16 q7f c4 DL2 c4]3
+DL1 c4 @34 c8. DL1 q7a c16 q7f c4 r4
+[DL1 c4 @34 c8. DL1 q7a c16 q7f c4 DL2 c4]4
+[DL1 q7f c4 DL2 c8. q7a c16 DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. DL2 q7a c16]4
+[DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. q7a c16 DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. DL2 q7a c16]3
+DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. q7a c16 DL1 q7f c16 DL2 c16 DL1 c8 DL2 c8. DL2 q7a c32..
+
+; Coda
+SCR v140 y15 q7f
+PF $c0 $0a c c c c c c c < g >
+PF $c0 $05 c c c c c c c < c >
+PF $c0 $0a c c c c c c c < g >
+PF $c0 $0f c c c c c c c < c >
+PF $c0 $0a c c c c c c c < g >
+PF $c0 $05 c c c c c c c < c >
+PF $c0 $0a c c c c c c c < g >
+PF $a8 $0f c c c c c c c
+
+VOX v230 p6,12,10 y10
+f+
+
+; -- Channel 4 --
+
+#3
+
+v178 l16 o4
+
+y11 q7a CHH r8 c f c f c f
+c f c f HD EKT y9 q7f c CHH EKT y11 q7a f HD EKT y9 q7f < g CHH EKT y11 q7a > f c HD EKT y9 q7f d CHH EKT y11 q7a c f HD EKT y9 q7f d CHH EKT y11 q7a f c f
+c HD EKT y9 q7f < g CHH EKT y11 q7a > c f HD EKT y9 q7f c CHH EKT y11 q7a f HD EKT y9 q7f < g CHH EKT y11 q7a > f c HD EKT y9 q7f d OHH EKT y11 q74 c8 HD EKT y9 q7f d CHH EKT y11 q7a f c f
+c f c f HD EKT y9 q7f c CHH EKT y11 q7a f HD EKT y9 q7f < g CHH EKT y11 q7a > f c HD EKT y9 q7f d CHH EKT y11 q7a c f HD EKT y9 q7f d CHH EKT y11 q7a f c f
+c HD EKT y9 q7f < g CHH EKT y11 q7a > c f HD EKT y9 q7f c CHH EKT y11 q7a f HD EKT y9 q7f < g CHH EKT y11 q7a > f c HD EKT y9 q7f d OHH EKT y11 q74 c8 HD EKT y9 q7f d4 EKT /
+
+; Intro - 4 loops, Verse 1 - 8 loops, Verse 2 - 8 loops
+[y11 q7a CHH c f c f HD EKT y9 q7f c CHH EKT y11 q7a f HD EKT y9 q7f < g CHH EKT y11 q7a > f c HD EKT y9 q7f d CHH EKT y11 q7a c f HD EKT y9 q7f d CHH EKT y11 q7a f c f
+c HD EKT y9 q7f < g CHH EKT y11 q7a > c f HD EKT y9 q7f c CHH EKT y11 q7a f HD EKT y9 q7f < g CHH EKT y11 q7a > f c HD EKT y9 q7f d OHH EKT y11 q74 c8 HD EKT y9 q7f d CHH EKT y11 q7a f c f]20
+
+; Bridge
+[c f c f]15 r4
+[c f c f]48
+
+; Coda
+[y11 q7a CHH c f c f HD EKT y9 q7f c CHH EKT y11 q7a f HD EKT y9 q7f < g CHH EKT y11 q7a > f c HD EKT y9 q7f d CHH EKT y11 q7a c f HD EKT y9 q7f d CHH EKT y11 q7a f c f
+c HD EKT y9 q7f < g CHH EKT y11 q7a > c f HD EKT y9 q7f c CHH EKT y11 q7a f HD EKT y9 q7f < g CHH EKT y11 q7a > f c HD EKT y9 q7f d OHH EKT y11 q74 c8 HD EKT y9 q7f d CHH EKT y11 q7a f c f]4
+
+; -- Channel 5 --
+
+#4
+
+BAS v210 o3
+
+r8 b8 b4
+b2.. e8 f+1
+b2.. e8 f+2. r4 /
+
+; Intro - 4 loops, Verse 1 - 8 loops, Verse 2 - 3+1+4 "loops"
+[b2.. e8 f+1]15
+b2.. e8 f+4. f+8 r16 f+8 r16 f+8 r8
+[b2.. e8 f+1]4
+
+; Bridge
+a4 r2.
+[r1]15
+
+; Coda
+[b2.. e8 f+1]4
+
+; -- Channel 6 --
+
+#5
+
+o4 v222
+
+KIK r8 c8 c8. c16
+[c8. c16 SNR EKT c8 KIK EKT c4. SNR EKT c8 KIK EKT c8]3 KIK c8. c16 SNR EKT c8 KIK EKT c4 KIK c8 SNR EKT c4 EKT /
+
+; Intro - 2 loops
+v222
+
+[[ [KIK c8. c16 SNR EKT c8 KIK EKT c4. SNR EKT c8 KIK EKT c8]3 KIK c8. c16 SNR EKT c8 KIK EKT c4 KIK c8 SNR EKT c8 KIK EKT c8 ]]2
+
+; Verse 1 - 4 loops, Verse 2 - 4 loops
+v200
+
+[[ [KIK c8. c16 SNR EKT c8 KIK EKT c4. SNR EKT c8 KIK EKT c8]3 KIK c8. c16 SNR EKT c8 KIK EKT c4 KIK c8 SNR EKT c8 KIK EKT c8 ]]8
+
+; Bridge
+KIK c4 r2.
+[r1]15
+
+; Coda
+[[ [KIK c8. c16 SNR EKT c8 KIK EKT c4. SNR EKT c8 KIK EKT c8]3 KIK c8. c16 SNR EKT c8 KIK EKT c4 KIK c8 SNR EKT c8 KIK EKT c8 ]]2
+
+#amk 2

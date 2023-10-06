@@ -1,0 +1,47 @@
+#am4
+; Civilization (SNES) Intro (Maxx)
+$ED $80 $6D $2B 
+$ED $80 $7D $00 
+$F0
+
+#0 w255 t27
+
+#0 @8 q7f v255 y10
+
+
+o2g1
+f1
+g1
+a+1
+a1
+>d1
+c1
+<a1
+;
+
+
+#1 @0 q7f v244 y10
+r4g4>d4<b4
+b4^8>c16<b16a2
+r4g4>d4e4
+f2e4d4
+c4e4a4g4
+f+4^8e8d2
+c2g2
+a16g16a2^4;
+
+#2 @11 q7f v215 y10
+[b8g8]4
+
+[a8f8]4
+
+[b8g8
+]4
+[>d8<a+8]4
+[>c8<a8]4
+[d8<a8>]4
+[c8<g8
+>]4
+[c+8<a8>]2
+c+2
+;
