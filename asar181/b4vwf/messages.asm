@@ -77,7 +77,7 @@ lvl00f_2:
 	db "", $00
 lvl010_1:
 	db "These platforms transfer the speed into Mario", $0a 
-	db "also free midairs!!", $00
+	db "also free midairs, you can slow down with right or left", $00
 lvl010_2:
 	db "", $00
 lvl011_1:
