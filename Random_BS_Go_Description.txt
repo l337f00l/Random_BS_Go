@@ -1,0 +1,12 @@
+First things first, if you decide to play this and you aren't having fun or it isn't vibing with you, please stop playing and play something else there are a million hacks out there and the goal of this hack is to have fun.  
+
+Now that's out of the way welcome to Random Bullshit Go, I started making this hack in 2021, by the start of 2022, I got jaded with Lunar Magic and took a year off, came back took my time creating and had these random levels from various abandoned projects so here we go.  I basically made this for me and if other people happen to like it then thats a bonus, the goal was to have fun making and playing and I think I achieved that.  I'd put this in the intermediate category for sure.
+
+Features
+12 exits + a credits level that doesn't count as an exit
+wacky ASM
+minimal midways (I think there might only be 2 in the entire game)
+minimal to no indication
+prompt retry (except one level is vanilla retry)
+A very simple overworld
+The few midways do save and you can save on the Overworld by pressing select.
