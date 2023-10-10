@@ -58,6 +58,7 @@
 32B:025 ReturnToOverworld-NoEvents.asm
 32C:025 instantpspeed.asm
 32D:025 SpriteKillerThatWontKillSpecifiedSprites.asm
+34B:12F SpriteKillerThatWontKillSpecifiedSprites.asm
 
 ;
 

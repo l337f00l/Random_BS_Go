@@ -50,6 +50,7 @@
 331	0	Instantly teleports the player to the level that you specify in the file.
 33c	0	This block is designed so that if you upthrow a sprite like a shell or throwblock at two of these blocks together, the sprite won't get caught between the two and lose its angular momentum, falling straight down. Do NOT place this block such that sprites can be thrown at it horizontally, or else they'll simply pass through it.
 33d	0	This block is designed so that if you upthrow a sprite like a shell or throwblock at two of these blocks together, the sprite won't get caught between the two and lose its angular momentum, falling straight down. Do NOT place this block such that sprites can be thrown at it horizontally, or else they'll simply pass through it.
+34b	0	This sprite killer allows you to put specific vanilla and custom sprites on a whitelist, so they won't be killed by it. Note, however, that it currently doesn't kill Yoshi if you go through these blocks while riding him. (The other sprite killer does, though.)
 34e	0	This is, in effect, a fixed version of vanilla lava, which doesn't allow Mario to swim in the top of it, and destroys sprites kicked into it with a lava splash (except for podoboos), no matter what part of it they touch.
 354	0	Allows for an instant dropoff from a gradual or normal slope, without having to place another tile with a flat top first.
 35c	0	A vertical pipe with its own defined level exit, so that multiple pipes leading to different level numbers can be put on the same screen.
@@ -105,6 +106,20 @@
 445	0	CoinIncreaseTime.asm
 448	0	Not a real coin, so that it doesn't increment coin count.
 570	0	Will increase the A button ammo.
+5F2 0 A brown used block that will make the Better Block Snake (Eating) turn left upon eating it.
+5F3 0 A brown used block that will make the Better Block Snake (Eating) turn right upon eating it.
+5F4 0 A brown used block that will make the Better Block Snake (Eating) turn left when the ON/OFF switch is ON or right when the ON/OFF switch is OFF upon eating it.
+5F5 0 A brown used block that will make the Better Block Snake (Eating) turn left when the ON/OFF switch is OFF or right when the ON/OFF switch is ON upon eating it.
+5F6 0 A brown used block that will make the Better Block Snake (Eating) move faster upon eating it.
+5F7 0 A brown used block that will make the Better Block Snake (Eating) move slower upon eating it.
+5F8 0 A brown used block that will make the Better Block Snake (Eating) stop upon eating it.
+5F9 0 An empty air block that will make the Better Block Snake (Creating) turn left upon eating it.
+5FA 0 An empty air block that will make the Better Block Snake (Creating) turn right upon eating it.
+5FB 0 An empty air block that will make the Better Block Snake (Creating) turn left when the ON/OFF switch is ON or right when the ON/OFF switch is OFF upon eating it.
+5FC 0 An empty air block that will make the Better Block Snake (Creating) turn left when the ON/OFF switch is OFF or right when the ON/OFF switch is ON upon eating it.
+5FD 0 An empty air block that will make the Better Block Snake (Creating) move faster upon eating it.
+5FE 0 An empty air block that will make the Better Block Snake (Creating) move slower upon eating it.
+5FF 0 An empty air block that will make the Better Block Snake (Creating) stop upon eating it.
 600	0	SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_L.asm
 601	0	SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_R.asm
 602	0	SSP_Tiles/pass_if_in_pipe.asm

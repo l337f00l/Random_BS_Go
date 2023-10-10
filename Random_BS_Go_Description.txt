@@ -8,5 +8,8 @@ wacky ASM
 minimal midways (I think there might only be 2 in the entire game)
 minimal to no indication
 prompt retry (except one level is vanilla retry)
+Trolls (deal with it)
 A very simple overworld
 The few midways do save and you can save on the Overworld by pressing select.
+
+GLHF - l337

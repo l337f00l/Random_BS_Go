@@ -234,7 +234,7 @@ name128:
 	db "GROOVY", $00
 name129:
 	db "", $0a
-	db "STAR ROAD", $00
+	db "Credits", $00
 name12a:
 	db "", $0a
 	db "GNARLY", $00
