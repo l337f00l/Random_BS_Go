@@ -1,0 +1,452 @@
+;==========================================;
+;	SPC Generator
+;==========================================;
+
+#SPC
+{
+	#title "Egg On The Moon" ; ~ Egg Rocket Act 1 (Remix)
+	#game "Sonic Advance 1"
+	#author "Yutaka Minobe"
+	#comment "arr. Hooded Edge"
+	#length "auto"
+}
+
+;==========================================;
+;	THIS RIGHT HERE IS DEFINITELY IMPORTANT!!
+;==========================================;
+
+; To change the pitch of the song, replace the number after
+; ''PITCH'' to any number between 1 - 2.
+; This won't affect the percussion as it doesn't use the variables below.
+
+; this allows for awesome customization to fit your needs or your
+; preferences... but if you know your stuff, then you should be able
+; to go way beyond the limits I gave you here.
+
+;==========================================;
+;	Song Pitch
+;==========================================;
+
+	#define PITCH 1
+
+;=================\ Pitch \==================;
+
+; 1 = Pitch will be on the c minor (Original)
+
+; 2 = Pitch will be on the c# minor (Custom)
+
+;==========================================;
+;	Samples
+;==========================================;
+
+#path "Mimi-Chan"
+
+#SAMPLES
+{
+	"../optimized/00 SMW @0.brr"
+	"../default/01 SMW @1.brr"
+	"../optimized/02 SMW @2.brr"
+	"../optimized/03 SMW @3.brr"
+	"../optimized/04 SMW @4.brr"
+	"../optimized/05 SMW @8.brr"
+	"../optimized/06 SMW @22.brr"
+	"../optimized/07 SMW @5.brr"
+	"../optimized/08 SMW @6.brr"
+	"../EMPTY.brr"
+	"../optimized/0A SMW @9.brr"
+	"../optimized/0B SMW @10.brr"
+	"../optimized/0C SMW @13.brr"
+	"../optimized/0D SMW @14.brr"
+	"../optimized/0E SMW @29.brr"
+	"../optimized/0F SMW @21.brr"
+	"../optimized/10 SMW @12.brr"
+	"../optimized/11 SMW @17.brr"
+	"../optimized/12 SMW @15.brr"
+	"../EMPTY.brr"
+
+	"02 SMW @2+3.brr"
+	"Square Lead.brr"
+	"Rudra Sawtooth.brr"
+	"MM7 Sawtooth.brr"
+
+	"RS1 Square.brr"
+	"MM7 Polysynth.brr"
+	"Sawtooth Bass.brr"
+
+	"R-8 Snare 2.brr"
+	"R-8 Kick 2.brr"
+	"R-8 Hi-Hat.brr"
+	"R-8 Crash Cym.brr"
+}
+
+;==========================================;
+;	Instruments
+;==========================================;
+
+#INSTRUMENTS
+{
+	"R-8 Snare 2.brr" $9F $F6 $B8 $14 $00 ; @30 snare
+	"R-8 Kick 2.brr" $CF $FA $B8 $15 $00 ; @31 bass drum
+	"R-8 Hi-Hat.brr" $FF $BB $B8 $0A $00 ; @33 closed hi-hat
+	"R-8 Hi-Hat.brr" $FF $B6 $B8 $0A $00 ; @34 open hi-hat
+	"R-8 Crash Cym.brr" $9F $F2 $B8 $0A $00 ; @35 crash cymbal (c+1)
+	"R-8 Crash Cym.brr" $9F $F3 $B8 $0A $00 ; @36 crash cymbal (c+4)
+
+	"02 SMW @2+3.brr" $FF $EE $B8 $05 $45 ; @37
+	@1 $FF $EE $B8 $03 $00 ; @38 synth
+	"Square Lead.brr" $FF $E6 $B8 $06 $02 ; @39 square lead
+	"Rudra Sawtooth.brr" $FF $E6 $B8 $03 $F5 ; @40 sawtooth
+	"MM7 Sawtooth.brr" $FF $EA $B8 $04 $01 ; @41 synth
+
+	"RS1 Square.brr" $FF $EF $B8 $04 $00 ; @42 square
+	"MM7 Polysynth.brr" $FA $E2 $B8 $03 $D4 ; @43 chord
+	"Sawtooth Bass.brr" $FF $E4 $B8 $04 $00 ; @44 bass
+}
+
+;==========================================;
+;	Main Macros
+;==========================================;
+
+	"@e = $F4 $03"
+	"%l = $F4 $01"
+
+	"($EE-X) = $EE $00"
+	"($FA-3X) = $FA $03 $00"
+	"$XR-X = $FA $02 $00"
+		"$XR- = $FA $02 $"
+	"($E8-X) = $E8 $00 $00"
+		"($E8-0) = $E8 $FF $1A" ; fade out
+	"($EC-X) = $EC $00 $00 $00"
+		"($EC-0) = $EC $00 $04 $02"
+	"($DC-X) = $DC $00 $00"
+	
+	"@rest = /"
+	
+	"@end = [ r2 ]200"
+
+;==========================================;
+;	Remote Commands
+;==========================================;
+
+	(!800)[ $F4 $09 ]
+	(!810)[ $ED $7F $FA ]
+
+	"@cmd_on = (!800, -1) (!810, 3)"
+	"@cmd_off = (!800, 0) (!810, 0)"
+
+;==========================================;
+;	Instrument Macros
+;==========================================;
+
+		"(F00) = $ED $7F $F4 ^8"
+		"(F10) = $ED $7F $F2 ^4"
+		"(F20) = $ED $7F $F1 ^2"
+
+	"@musbox = @36 v255 | (B00)"
+		"(A00) = $FA $03 $1F"
+		"(B00) = $DE $0A $0C $1F"
+	"@synth = @37 v230 | (B00)"
+	"@leadsqr = @38 v255 | $DE $12 $0A $24"
+		"(900) = v180"
+		"(F01) = (F00) | @38"
+	"@sawtooth = @39 v255 | $FA $03 $1D | $DE $12 $0A $24"
+	"@mm7saw = @40 v235 | $DF"
+
+	"@BGsqr = @41 v245"
+	"@chord = @42 v190"
+	"@bass = @43 o3 v255"
+
+;==========================================;
+;	Percussion Macros
+;==========================================;
+
+		"(vol) = v255"
+	"@snare = @30 | $FA $03 $5F"
+	"@kick = @31 | ($FA-3X)"
+
+	"@closed = @32 y9"
+	"@open = @33 y10"
+	"@crash = v255 y10 | $FA $03 $AF"
+		"@crash+ = @34 | @crash"
+		"@crash- = @35 | @crash"
+
+;==========================================;
+;	Echo Values
+;==========================================;
+
+	$EF $BC $32 $32 ; OFF - #0, #1, #6
+	$F1 $05 $50 $01
+	$F4 $02
+
+;==========================================;
+;	DON'T MESS WITH THIS
+;	IF YOU DON'T KNOW WHAT YOU'RE DOING!!!
+;==========================================;
+
+#if PITCH == 1 ; Original
+;	$E4 $00 ; c minor
+	"@wakana = "
+	"@eggman = "
+#endif
+
+#if PITCH == 2 ; Custom
+	$E4 $01 ; c# minor
+	"@wakana = h0"
+	"@eggman = h-1"
+#endif
+
+;==========================================;
+;	Extras
+;==========================================;
+
+	"CHANNEL # = #"
+
+;==========================================;
+;	Global Volume / Tempo
+;==========================================;
+	w100 t61
+;==========================================;
+
+;==========================================;
+	CHANNEL #0 | @eggman
+;==========================================;
+
+o3 (vol) | l8
+r4. [ @kick c r2
+^4. ]3 c r4. @snare c16 c16 [ @kick
+c r ]7 c @snare c16 c16 @kick
+c r c @snare c @kick c r c r 
+c r c @snare c @kick c @snare c c c16 c16 / @kick
+
+[[ (000)[ c r @snare c r @kick c r @snare c r16 c16 @kick ]
+(001)[ c r @snare c r @kick c r @snare c c @kick ] (000) 
+(002)[ c r @snare c r @kick c @snare c c c16 c16 @kick ] 
+(000) (001) (000) 
+(003)[ c @snare c c @kick c c16 @snare c16 c c c16 c16 @kick ] ]]2
+
+(000) (001) (000) c r @snare c r @kick c r @snare c c16 c16 @kick 
+(000) (001) (000) (003)
+(000) (001) c r @snare c r @kick c @snare c c c16 c16
+c r c r c r16 c r16 c @kick
+
+(000) (001) (000) (002)
+(000) (001) (000)
+c16 @snare c16 c16 c16 c @kick c @snare c16 c16 c c16 c16 c16 c16 @kick
+
+@end
+
+;==========================================;
+	CHANNEL #6 | @eggman
+;==========================================;
+
+o4 | l8
+[ @closed c r4 c r2 ]4
+
+@e @crash- c+4 ($FA-3X) @e @closed
+[ c r ]8 c @open c @closed [ c r ]3 c @open c @closed c @open c
+(100)[ c @closed c16 c16 @open ] @e /
+
+@eggman
+[[ (105)[ @crash- c+4. ($FA-3X) @e @closed c16 q7E c16 q7F @open ] (100)30 @e ]]2
+
+l16
+[[ @crash- c+4^ ($FA-3X) @e @closed q7E c q7F @open c8 @closed
+[ c q7E c q7F @open c8 @closed ]14 @e ]]2
+(105) (100)10 @e
+@crash+ c+4 c+4 c+8. c+8. c+8
+
+[ @crash- c+4^ ($FA-3X)
+
+@BGsqr y11 | @wakana
+< b+ a+ > d+ c g d+ a+
+g > d+ < a+ > g d+ a+ < g d+ a+ g > d+ < a+ > f d+ g d+ f d+ b+2^8 (F20) @eggman r1 ]2
+
+;==========================================;
+	CHANNEL #1
+;==========================================;
+
+r4. @bass | l8
+c1 c1 c1 c2^
+[ c4. c4 c c4 ]4 /
+
+(200)[ c. c. c. c. c c16 c16 ]8
+
+(210)[ c. b+. c. c. c c16 c16 ]8
+
+[[ $XR-02 (210)2 ; d
+$XR-03 (210)2 ; d+
+$XR-X ]]2
+
+[ f. > f. < f. f. f f16 f16 ]3
+
+a+ r f+ r g+ r16 d+ r16 c
+
+(200)8
+
+;==========================================;
+	CHANNEL #2
+;==========================================;
+
+@chord o3 y11
+q7C (500)[ g1 a+1 a1 g+1 ]2 q7F /
+
+@musbox o5 y9 | l8
+(300)[ b+4. g4. a+4. 
+d+4 c16 d+16 d d+ g4 
+d+. d. d+ f4 d+ c1^16 
+g16 
+b+. g. a a+. g. d+4 
+f. d+. d d+ g4 
+g. f. g a. a+. b+1 (F00) ] <
+
+@leadsqr | l16
+(400)[ < < b+2.. g b+ > g2^8. c f g a a+ 
+a2.^ g a a+ a8. f8. c4 c c d d+ f8 
+d+4. c4.. c d+ f g2. c f g a 
+a+8. > c8. c4 $DD $00 $0A d ^8 ] c8 < a+ a2^16 (F00) >
+
+@sawtooth
+y11 d8 y10 f8 y9 g8
+a4 a q79 a q7F a+4 a+ q79 a+ q7F b+ q79 b+ q7F f4.
+c q79 c q7F d4 d q79 d q7F f8 f q79 f q7F
+g8 g q79 g q7F a8 a q79 a q7F a+8 a+ q79 a+ q7F a8 g8
+> c8 $DD $00 $08 d+ ^ q79 d+ q7F d8. q79 d q7F < a+8. a8. g8
+a4 a q79 a q7F a+4 a+ q79 a+ q7F b+ q79 b+ q7F f2
+d4 d q79 d q7F f8 a+ q79 a+ q7F
+> d8 c8 c q79 c q7F d4 d q79 d q7F c8
+f4 $DD $00 $0A g g q79 g q7F f8 f q79 f q7F d8 d q79 d q7F d c d e
+
+l8
+f. c. < a+ > d. c. < a+ 
+a a16 g g16 a a $DD $00 $08 a+ ^16 > c. f1 (F00) ($FA-3X)
+
+@mm7saw
+< < a+ r f+ r g+ r16 d+ r16 c >
+
+@leadsqr | l4
+f $DD $00 $0F g ^ > c $DD $00 $0F d ^ < a+2 > f $DD $00 $0F g ^
+d+ $DD $00 $0F f ^8 ^8 $DD $00 $14 d c1^. (F01) <
+l8
+f $DD $00 $08 g q79 g16 q7F g q79 g16 q7F g
+> c $DD $00 $08 d q79 d16 q7F d q79 d16 q7F d <
+a+ q79 a+16 q7F a+ q79 a+16 q7F a+ >
+f $DD $00 $08 g q79 g16 q7F a q79 a16 q7F a+ 
+b+2 d+ $DD $00 $08 f q79 f16 q7F g q79 g16 q7F a
+a+2. (F10)
+
+;==========================================;
+	CHANNEL #3
+;==========================================;
+
+@chord o4 y9
+q7E g1 a+1 a1 g+1
+g1 a+1 q7D a1 q7C g+2. (F10) q7E /
+
+@synth y11 | @wakana
+(300)
+
+; l8
+; g4. d+4. g4. c4 < g16 b+16 a+ > c d+4 
+; c. < a+. > c d4 c < g+1^16 > d+16 
+; g. d+. f g. d+. c4 d. c. < a+ > c d+4
+; d+. d. d+ f. g. g+1 (F00) q7F
+
+@leadsqr y12 | l16
+< < g2.. d+ g >
+d+2^8. < g > c d+ f g 
+f2.^ d+ f g 
+f8. c8. < g4 g g a+ > c c8
+c4. < g4.. g > c d 
+d+2. < g > c d+ f 
+g8. a8. a+4. q7D a8 q7C g q7B f q7F
+
+@BGsqr y11 | l32
+a > c e c e f c f a f a b+ f a > f c f a f a b+ a > c f (420)[ f c f c < a > f c < a 
+b+ a f a f c f c < a b+ a f a f c f c < a b+ a q7E f a f c > q7D a f c q7C f c < q7B a b+ q7A a > q7F
+
+@musbox y12 | (A00) | l8
+f4 g4 a. a+. > c d4. e32 f4^16. d+ ] d2.. ($FA-3X)
+
+@BGsqr y11
+(420) d1^ ($FA-3X) <
+
+@sawtooth
+q7E b+. a. g a. a. g 
+f f16 d+ d+16 f f. a. b+1 (F00) ($FA-3X)
+
+@mm7saw
+< f+8 r8 c+8 r8 d+8 r16 < a+8 r16 g8 >
+
+@open | @eggman
+(100)32
+
+;==========================================;
+	CHANNEL #4
+;==========================================;
+
+@chord o4 y12 | l1
+q7E [ d+ g f d+ ]2 q7C
+
+y13 /
+
+[ d+ g f f ]2 
+d+ g f^ 
+d+ g a^
+
+d d < a+^ >
+d d f g
+f^^
+
+< a+8 r8 f+8 r8 g+8 r16 d+8 r16 c8 >
+
+[ d+ g f d+ ]2
+
+;==========================================;
+	CHANNEL #5
+;==========================================;
+
+@chord o4 y7
+q7C (700)[ c d+ c c ]2 /
+
+[ c d+ c c+ ]2
+c d+ c^
+c d+ f^
+
+< a a g^
+a a a+ b+
+b+^^
+
+f+8 r8 c+8 r8 d+8 r16 < a+8 r16 g8 >
+
+(700)2
+
+;==========================================;
+	CHANNEL #7
+;==========================================;
+
+@crash+ o4 | @eggman
+c+1 r1 c+1 r1 ($FA-3X) <
+
+@BGsqr y11 | @wakana | l32
+c g d+ g b+ g > d+ < a+ > c d+ < g b+ a+ > g c d+
+g a+ d+ g a+ b+ g a+ > c d+ g d+ c b+ a+ g
+d+ c < a+ d+ c g d+ < a+ g b+ g d+ c a+ g c
+< a+ > d+ < a+ g b+ a+ g d+ g d+ < a+ > g d+ < a+ > d+ < a+
+q79 a+ q76 a+ q73 a+ q71 a+ q7F r1... > > /
+
+@chord y11 | l1
+q7C (500)2
+g a+ a^ 
+g a+ b+^
+
+f f d^
+f f g a+
+a^^ r
+
+(500)2
+
+;==========================================;
+;	MML by Hooded Edge
+;==========================================;
+
+#amk 2

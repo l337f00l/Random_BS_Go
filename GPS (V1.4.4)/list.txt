@@ -5,6 +5,7 @@
 
 276:025 one_way_down.asm
 277:025 one_way_right.asm
+33A:025 one_way_right.asm
 278:025 one_way_left.asm
 ;282:130 vinealways.asm
 286:1F0 Collectable1F0.asm

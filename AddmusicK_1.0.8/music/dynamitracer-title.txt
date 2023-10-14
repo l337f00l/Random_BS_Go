@@ -1,0 +1,174 @@
+#amk 2
+
+#spc
+{
+    #title   "Title"
+    #game    "DynamiTracer"
+    #author  "Nobuo Uematsu"
+    #comment "Ported by KevinM"    
+}
+
+#path "dynamitracer-title"
+
+#samples
+{
+    #dynamitracer-title
+    "sample_06.brr"
+    "sample_03.brr"
+    "sample_04.brr"
+    "sample_0B.brr"
+    "sample_0A.brr"
+    "sample_07.brr"
+    "sample_08.brr"
+    "sample_0C.brr"
+    "sample_09.brr"
+    "sample_05.brr"
+}
+
+#instruments
+{
+    "sample_06.brr" $ff $e0 $a0 $02 $5d ; @30
+    "sample_03.brr" $ff $e0 $a0 $01 $b4 ; @31
+    "sample_04.brr" $ff $e0 $a0 $01 $b4 ; @32
+    "sample_0B.brr" $ff $e0 $a0 $01 $b4 ; @33
+    "sample_0A.brr" $ff $e0 $a0 $01 $b4 ; @34
+    "sample_07.brr" $ff $e0 $a0 $01 $46 ; @35
+    "sample_08.brr" $ff $e0 $a0 $02 $dc ; @36
+    "sample_0C.brr" $ff $e0 $a0 $01 $b4 ; @37
+    "sample_09.brr" $ff $e0 $a0 $01 $b4 ; @38
+    "sample_05.brr" $ff $e0 $a0 $0c $84 ; @39
+    "sample_05.brr" $ff $e0 $a0 $0c $62 ; @40
+}
+
+w175 t44
+
+(!900)[$e8$00$00 v248]
+(!901)[$e8$00$00 v246]
+(!902)[$e8$c0$20]
+
+#0 $f0 $f4$02
+(99)[r4]8 / r=3
+
+(00)[
+@30 v226 y10 o5
+f+8. f+16 f+8 r4 e16 r8 f8. f+8. f+16 f+8 r=93
+
+@38 v228 y12 o5
+f8^=3
+
+@30 v226 y10 o5
+f+8. f+16 f+8 r4 e16 r8 f8. f+8. f+16 f+8 r=93
+
+@34 v228 y8 o5
+f8^=3
+
+@30 v226 y10 o4
+b8. b16 b8 r4 a16 r8 a+16 r8 b8. b16 b8 r=93
+
+@38 v228 y12 o5
+f8^=3
+
+@30 v226 y10 o5
+f+8. f+16 f+8 r4 e16 r8 f8. f+8. f+16 f+8 r=93
+
+@34 v228 y8 o5
+f8^=3
+
+@30 v226 y10 o5
+c+8. c+16 c+8 r4 c+16 r8 c8. < b8. b16 b8 r=93
+
+@38 v228 y12 o5
+f8^=3
+
+@30 v226 y10 o5
+f+8. f+16 f+8 r4 e16 r8 f16 r8 f+8. f+16 f+8 r=69
+]
+
+@34 v228 y8 o5
+r8 f8^=3
+
+(00)
+
+@33 v255 y16 o5
+f4
+
+(99)22
+
+(40)[@37 v243 y6 o5 f8. v234 y10 d+8. v240 y14 c+8]
+
+#1
+o5 l4
+[
+@31 v188 y10 f
+@32 v202 y9 f8.
+@31 v188 y10 f16 f8 f8
+@32 v202 y9 f8.
+@31 v188 y10 f16 f
+@32 v202 y9 f8.
+@31 v188 y10 f16 f8 f8
+]
+@32 v202 y9 f
+/
+[[
+*
+@32 v202 y9 f
+]]11
+*
+@33 v253 y4 f+
+(99)9
+@32 v202 y9 f
+@34 r f
+@32 r {f v160 f v106 f}
+@34 v202 f
+[[
+@32 r f
+@34 r f
+]]2
+
+#2
+(99)8 /
+
+@35 v134 o6 l8
+[y14 r d y6 r d]47
+y14 r d r4
+*12
+
+#3
+(99)8 /
+
+@36 v125 y10 o6
+[[ [r4^16 c16 r4 c16 r2^8 c16 r8. c16 r8] c16 r8.]]11
+*
+(99)23
+(40)
+
+#4
+r1^=188
+
+(61)[@39 y16 o2 (!900,-1) (!902,1,$C0)
+$f4$01 c+=4] /
+(60)[^=188 $f4$01 ^1
+c+1^1
+f+1^1
+c+1^1
+g+1 f+1
+c+1^2^4 r4]
+$f4$01 c+=4
+(60)
+r=4
+
+@31 v188 y10 o5 (!0,0)
+[[f4]]23 f=44
+
+(61)
+
+#5
+r1^=190
+
+@40 y4 o2 (!901,-1) (!902,1,$C0)
+$f4$01 c+=2 / ^=2
+(60)
+$f4$01 c+=4
+(60)
+(99)24
+$f4$01 c+=2
