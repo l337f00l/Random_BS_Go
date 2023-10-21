@@ -1,40 +1,13 @@
 main:
-  ; load in powerup status
-  LDA $19
-  ; if it's anything other than zero, we kill mario.
-  BNE .kill
+  LDA $19            ; powerup state
+  BNE .kill          ; kill if not small mario
 
-  ; load up the star timer
-  LDA $1490
-  ; if it's anything other than zero, we kill mario.
-  BNE .kill
-
-
-  BRA .return
-.kill
-  ; otherwise, we kill the mario :O
-  JSL $00F606
-
-.return
+  LDA $1490|!addr    ; star timer
+  BNE +
   RTL
++
+  STZ $1490|!addr    ; reset timer so this isn't continually triggered
 
-
-;main:
-  ; load in powerup status
-;  LDA $19
-  ; if it's zero, then we're small and we'll kick out.
-;  BEQ .return
-
-;main:
- ; LDA #$02
- ; STA $19
-
-
-;.return
-;  RTL
-
-  ; otherwise, we kill the mario :O
-;  JSL $00F606
-
-;.return
-;  RTL
+.kill:
+  JSL $00F606|!bank
+  RTL
