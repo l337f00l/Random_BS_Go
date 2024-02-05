@@ -315,7 +315,7 @@ lvl112_2:
 lvl113_1:
 	db "", $00
 lvl113_2:
-	db "Collect the coin to get ammo for the shooter", $0A
+	db "Collect the coin to get ammo for the shooter, shoot with L or R", $0A
 	db "Use the R button, Shoot the shell into the sprite killer", $00
 lvl114_1:
 	db "", $00
@@ -332,7 +332,9 @@ lvl116_2:
 lvl117_1:
 	db "", $00
 lvl117_2:
-	db "", $00
+	db "Collect the coins to shoot shells, shoot with L or R", $0a
+	db "The shooter acts like a key", $0a
+	db "GLHF - L337", $00
 lvl118_1:
 	db "", $00
 lvl118_2:
@@ -434,7 +436,7 @@ lvl12c_1:
 lvl12c_2:
 	db "", $00
 lvl12d_1:
-	db "", $00
+	db "Did you have fun Chambo", $00
 lvl12d_2:
 	db "", $00
 lvl12e_1:
@@ -496,8 +498,8 @@ lvl13b_2:
 ; =============================================================================
 msg001:
 	%exitlevel($00)
-	db "These are some random levels I had kicking around", $0a
-	db "I apologize in advance, GLHF - L337", $00
+	db "This is for you Chambo", $0a
+	db "GLHF - L337", $00
 
 msg002:
 	; Message #2 of the intro level.

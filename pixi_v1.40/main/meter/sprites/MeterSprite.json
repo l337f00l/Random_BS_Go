@@ -14,14 +14,14 @@
   "$166E": {
     "Use second graphics page": true,
     "Palette": 0,
-    "Disable fireball killing": false,
+    "Disable fireball killing": true,
     "Disable cape killing": true,
     "Disable water splash": false,
     "Don't interact with Layer 2": false
   },
   "$167A": {
     "Don't disable cliping when starkilled": false,
-    "Invincible to star/cape/fire/bounce blk.": false,
+    "Invincible to star/cape/fire/bounce blk.": true,
     "Process when off screen": true,
     "Don't change into shell when stunned": false,
     "Can't be kicked like shell": false,

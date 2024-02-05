@@ -56,3 +56,4 @@ Locals:
 36  SMW_Castle in Seven.txt
 37  Order of the Holy Spirit.txt
 38  Xemogasa - sapphire eyes.txt
+39  White Winter Night.txt

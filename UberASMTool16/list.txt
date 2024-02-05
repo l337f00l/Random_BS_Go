@@ -24,6 +24,8 @@ level:
 ;13F   GoalTapeMoveLeft.asm
 106   buttonAmmoL.asm
 113   buttonAmmoL.asm
+117   buttonAmmoL.asm
+118   buttonAmmoL.asm
 11F   killpowerup.asm
 110   nopointdodge.asm
 ;111   carry_sprites.asm
@@ -33,6 +35,7 @@ level:
 ;25    Pressure_Spawn.asm
 25     bucket_water.asm
 129    Sparkster.asm
+12D    PSwitchMeter.asm
 
 ; OW list. Valid values: 0 = Main map; 1 = Yoshi's Island; 2 = Vanilla Dome;
 ; 3 = Forest of Illusion; 4 = Valley of Bowser; 5 = Special World; and

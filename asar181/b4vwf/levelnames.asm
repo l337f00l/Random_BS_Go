@@ -180,7 +180,7 @@ name116:
 	db "VALLEY OF BOWSER 1", $00
 name117:
 	db "", $0a
-	db "CHOCOLATE SECRET", $00
+	db "CAPE SHOOTER", $00
 name118:
 	db "", $0a
 	db "VANILLA DOME 2", $00
@@ -246,7 +246,7 @@ name12c:
 	db "WAY COOL", $00
 name12d:
 	db "", $0a
-	db "AWESOME", $00
+	db "WOW CHAMBO WOW", $00
 name12e:
 	db "", $0a
 	db "STAR ROAD", $00

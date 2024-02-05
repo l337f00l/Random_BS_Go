@@ -17,7 +17,8 @@
 2A0:130 sprite_solid.asm
 2A1:130 mario_solid.asm
 2A2:025 spritekiller.asm
-2A3:025 spriteonlytriangleright.asm
+;2A3:025 spriteonlytriangleright.asm
+2A3:025 SpriteOnlyTriangle-RightwardsKicked.asm
 2A4:025 spriteonlytriangleleft.asm
 2A9:025 instantpowerdown.asm
 2B0:025 OnSolid.asm
@@ -60,6 +61,7 @@
 32C:025 instantpspeed.asm
 32D:025 SpriteKillerThatWontKillSpecifiedSprites.asm
 34B:12F SpriteKillerThatWontKillSpecifiedSprites.asm
+334 kill_muncher.asm
 
 ;
 

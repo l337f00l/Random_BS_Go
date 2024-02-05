@@ -14,7 +14,7 @@
 2a0	0	Solid for sprites, but allows Mario to pass
 2a1	0	Solid for Mario, but allows sprites to pass. If you don't like the look of the normal yellow sprite-pass block, I've also included a block graphic in the same style as the red light switch, set to act the same as this.
 2a2	0	Kills all sprites which interact with blocks - even if you're riding Yoshi, and even if Yoshi has a sprite in his mouth. Note, though, that if you destroy a vanilla spring, it will warp Mario. This is an unavoidable behavior of all sprite killers, though custom sprite 20 is a spring disassembly, and won't be affected by this. I've also included another sprite killer, KillsTheSpritesYouSpecify.asm, where springs are automatically whitelisted.
-2a3	0	Triangle that's only solid for sprites, and doesn't require 1EB block underneath
+2a3	0	Sprite only triangle, will bounce kicked sprites if they're going rightward
 2a4	0	Triangle that's only solid for sprites, and doesn't require 1EB block underneath
 2a9	0	Instant power-down, with no temporary invincibility
 2b0	0	A regular on-off block, solid when the switch is on
@@ -48,6 +48,7 @@
 32d	0	This sprite killer allows you to put specific vanilla and custom sprites on a whitelist, so they won't be killed by it. Note, however, that it currently doesn't kill Yoshi if you go through these blocks while riding him. (The other sprite killer does, though.)
 32e	0	A vanilla horizontal exit pipe, except that you can enter it while in midair (you don't need to be standing on anything solid).
 331	0	Instantly teleports the player to the level that you specify in the file.
+334	0	Kills player, even if you're big Mario or have a powerup
 33a	0	Sprites and Mario can pass through these when going right, but can't go back left
 33c	0	This block is designed so that if you upthrow a sprite like a shell or throwblock at two of these blocks together, the sprite won't get caught between the two and lose its angular momentum, falling straight down. Do NOT place this block such that sprites can be thrown at it horizontally, or else they'll simply pass through it.
 33d	0	This block is designed so that if you upthrow a sprite like a shell or throwblock at two of these blocks together, the sprite won't get caught between the two and lose its angular momentum, falling straight down. Do NOT place this block such that sprites can be thrown at it horizontally, or else they'll simply pass through it.
